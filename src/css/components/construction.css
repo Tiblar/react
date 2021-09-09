@@ -1,0 +1,27 @@
+@media screen and (max-width: 1000px) {
+    .graphic svg {
+        min-width: 200px !important;
+    }
+}
+.container {
+    display: flex;
+    flex: 1;
+    background: var(--background-portal);
+    align-content: center;
+    justify-content: center;
+}
+.graphic {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.graphic svg {
+    min-width: 400px;
+    max-width: 90%;
+}
+.graphic h2 {
+    margin-top: 2rem;
+}

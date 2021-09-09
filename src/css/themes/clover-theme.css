@@ -1,0 +1,92 @@
+:global(.clover-theme-profile) {
+    --primary-color: #7286e9;
+    --link-color: #7678ac;
+    --link-color-hover: #6468d4;
+    --background-primary: #ffffff;
+    --background-primary-transparent: rgba(255, 255, 255, 0);
+    --background-secondary: #f5f5f5;
+    --background-tertiary: #f4f4f4;
+    --background-layer: var(--background-primary);
+    --background-portal: #f9f9f9;
+    --background-grey: #ffffff;
+    --background-dark: #e8e8e8;
+    --background-input: #ffffff;
+    --background-poll: #e9ecef;
+    --background-poll-active: #d1d1ef;
+    --border-primary: #d9d9db;
+    --border-secondary: #e7e7e9;
+    --border-tertiary: #eceff1;
+    --border-input: #d8dfe6;
+    --border-input-focus: #80bdff;
+    --text-placeholder: #939ba3;
+    --header-primary: #ffffff;
+    --text-normal: #4a4a4a;
+    --text-muted: #6c757d;
+    --text-light: #b3b7c6;
+    --header-border-radius: 0.35rem;
+    --nav-tab: #6c757d;
+    --nav-tab-active: #cccccc;
+    --nav-border-primary: #ad61ac;
+    --nav-border-secondary: #ad61ac;
+    --sidebar-logo: #898989;
+    --sidebar-active: #e8e8e8;
+    --sidebar-hover: #f9f4ff;
+    --sidebar-text: #7678ac;
+    --sidebar-title: #7678ac;
+    --sidebar-icons: #7678ac;
+    --sidebar-icons-shadow: transparent;
+    --sidebar-notification: #7678ac;
+    --button-background: #fbfbfb;
+    --button-text: #4a4a4a;
+    --button-fill: #6c757d;
+    --button-hover-box-shadow: rgba(227, 227, 227, 0.3);
+    --button-background-disabled: #ececec;
+    --button-background-color: #8b8b8b;
+    --button-group-background: #f6f6f6;
+    --button-group-background-hover: #eaeaea;
+    --post-border-radius: 0.35rem;
+    --post-link-background: #eee;
+    --post-header-border: #e7e7e9;
+    --post-header-text: #6c757d;
+    --post-reply-timestamp: #d7d7d7;
+    --post-box-shadow: 0 0 6px rgba(50,50,93,.11),0 0 6px rgba(0,0,0,.08);
+    --post-box-shadow-mobile: 0 -2px 3px rgba(0, 0, 0, 0.03);
+    --profile-header: #4a4a4a;
+    --interaction-liked: #fff2f2;
+    --interaction-liked-background-hover: #fff2f2;
+    --interaction-liked-border-hover: #fcd9d9;
+    --interaction-secondary-hover: #fdecee;
+    --interaction-success: #f1fff9;
+    --interaction-success-hover: #edfff7;
+    --interaction-purple: #e7ebff;
+    --interaction-purple-border-hover: #ced5f3;
+    --profile-background: #eeeeee;
+    --loader-background: #f5f6f7;
+    --loader-foreground: #eeeeee;
+    --alert-blue-background: #efefff;
+}
+
+.logo path {
+    fill: #ad61ac;
+}
+
+.background {
+    background: url(../../assets/themes/backgrounds/clover.jpg) fixed repeat;
+}
+
+.leftNav {
+    background: #fff url(../../assets/themes/backgrounds/clover/dots.png)!important;
+}
+
+.rightNav {
+    background: #fff2ff url(../../assets/themes/backgrounds/clover/diagonal.png)!important;
+}
+
+.topNav {
+    background: #fff2ff url(../../assets/themes/backgrounds/clover/diagonal.png)!important;
+}
+
+.username {
+    font-family: "Cyberpunk", sans-serif;
+    color: #ff073a;
+}

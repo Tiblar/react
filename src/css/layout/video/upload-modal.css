@@ -1,0 +1,4 @@
+.aboutFile {
+    border: 2px solid var(--border-input);
+    padding: 1rem;
+}

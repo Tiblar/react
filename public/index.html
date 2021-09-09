@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Formerly Chuck's is a privacy centered social media platform. Watch video, look at images, vote in polls, and listen to audio."
+    />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Formerly Chuck's</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="mount"></div>
+    <script id="boot-theme" nonce>
+      if(localStorage.getItem("theme") === "dark") { document.getElementsByTagName("html")[0].classList.add("dark-theme") }
+      document.getElementById("boot-theme").outerHTML = "";
+    </script>
+  </body>
+</html>

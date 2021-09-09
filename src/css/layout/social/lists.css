@@ -1,0 +1,10 @@
+@media screen and (max-width: 800px) {
+    .container {
+        width: calc(100% - 2rem)!important;
+        padding: 1rem;
+    }
+    .header {
+        width: calc(100% - 2rem)!important;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,20 @@
+@media (max-width: 1500px) {
+  .location {
+    display: none;
+  }
+}
+.location {
+  position: absolute;
+  right: 365px;
+  font-family: "Work Sans SemiBold", sans-serif;
+  font-size: 17px;
+  color: #b3b7c6;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.icon path {
+  fill: #b3b7c6;
+}

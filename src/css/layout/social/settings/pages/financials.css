@@ -1,0 +1,70 @@
+.container {
+  padding: 0.5em 1em 1em 1em;
+}
+.container h3 {
+  display: flex;
+  margin-top: 0;
+  padding: 0.65em;
+  border: 1px solid rgb(235, 240, 240);
+  margin-bottom: 2em;
+}
+.container h3 svg {
+  margin-right: 0.75em;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.table p {
+  font-size: 14px;
+}
+.table .shrink {
+  flex: 0 !important;
+}
+.table .order {
+  display: flex;
+  flex: 1;
+  margin: 0.25rem 0;
+  padding: 0.75rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.1s;
+}
+.table .order:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-color: var(--border-primary);
+}
+.table .order > div:not(.divide) {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.table .order.mobile {
+  flex-direction: column;
+}
+.table .order.mobile > div {
+  align-items: unset !important;
+}
+.table .order:not(.mobile) > div:not(:first-child) {
+  margin-left: 1rem;
+}
+.table .order:not(.mobile) > div:not(:last-child) {
+  margin-right: 1rem;
+}
+.invoice {
+  display: flex;
+}
+.invoice > div:not(:first-child) {
+  margin-left: 1rem;
+}
+.invoice > div:not(:last-child) {
+  margin-right: 1rem;
+}
+.creditCard:read-only {
+  flex: 1;
+  background: var(--background-input) !important;
+}

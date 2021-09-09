@@ -1,0 +1,183 @@
+@media screen and (max-width: 1100px) {
+    .main {
+        margin: 1.5rem 1.5rem 0 1.5rem;
+    }
+    .main .info {
+        margin-left: unset !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        border: unset !important;
+        border-radius: 0 !important;
+        margin: unset !important;
+        margin-bottom: 1rem !important;
+        max-width: 100% !important;
+    }
+    .container {
+        max-width: 100% !important;
+    }
+    .header .cover, .header .cover > img {
+        border-top-left-radius: 0!important;
+        border-top-right-radius: 0!important;
+    }
+}
+
+.header {
+    position: relative;
+    max-width: 700px;
+    margin: 2rem auto;
+    border: 1px solid var(--border-secondary);
+    background: var(--background-primary);
+    border-radius: var(--header-border-radius);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.videoHeader {
+    max-width: 900px!important;
+}
+.header .cover {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    background: var(--profile-background);
+    position: relative;
+    border-top-left-radius: var(--header-border-radius);
+    border-top-right-radius: var(--header-border-radius);
+}
+.header .cover > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: var(--header-border-radius);
+    border-top-right-radius: var(--header-border-radius);
+}
+.cover .headerImage {
+    width: 100%;
+}
+.cover .profileImage > img, .cover .profileImage > svg {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1.5rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    background: var(--background-primary);
+    border-radius: 0.5rem;
+    width: 100px;
+}
+.header .editHeader {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+}
+.main .info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-left: calc(3rem + 100px);
+    min-height: 3.5rem;
+}
+.main .info .username {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+.main .info .username label {
+    padding: 0.35rem;
+    border-radius: 0.2rem;
+    background: var(--background-tertiary);
+    color: var(--text-normal);
+    font-size: 0.75rem;
+    margin-left: 0.75rem
+}
+.main .info .actions {
+    position: relative;
+    display: flex;
+    color: var(--text-normal);
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.main .info .biography {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    user-select: text !important;
+    word-break: break-all;
+    margin-right: 1.5rem;
+}
+.main .info .biography span {
+    color: var(--profile-header);
+}
+.main .info .location {
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    fill: var(--profile-header);
+    color: var(--profile-header);
+}
+.main .info .location span {
+    color: var(--profile-header);
+}
+.main .info .location > svg {
+    margin-right: 0.5rem;
+}
+.follow {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+.container .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 0.35rem;
+}
+.container .card .top {
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-primary);
+}
+.container .card .body {
+    padding: 1rem;
+}
+.container .card .body .section {
+    display: flex;
+    align-items: center;
+    color: var(--text-normal);
+    fill: var(--text-normal);
+    padding: 0.5rem;
+}
+.container .card .body .section > svg {
+    padding: 0.5rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 100rem;
+    margin-right: 0.85rem;
+}
+.followEmpty {
+    color: var(--text-normal);
+}
+.followProfile {
+    color: var(--text-normal);
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.35rem;
+}
+.followProfile:not(:first-child) {
+    margin-top: 0.5rem;
+}
+.followHeader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0.75rem;
+}
+.followBiography {
+    word-break: break-all;
+}

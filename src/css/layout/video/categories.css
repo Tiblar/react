@@ -1,0 +1,92 @@
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0.5rem 0 !important;
+    }
+    .category:first-child {
+        margin-left: 0.5rem;
+    }
+}
+.container {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--nav-border-secondary);
+    min-height: 20px;
+}
+.controls {
+    position: relative;
+    overflow: hidden;
+}
+.categories {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.categories.mobile {
+    overflow: auto !important;
+}
+.category {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-primary);
+    margin-right: 0.5rem;
+    border-radius: 100rem;
+    transition: background-color 0.1s;
+}
+.category:hover {
+    cursor: pointer;
+    box-shadow: var(--post-box-shadow);
+    background: var(--background-grey);
+}
+.category.active {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: var(--post-box-shadow);
+}
+.scrollAction {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+    background: var(--background-primary);
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.button svg {
+    color: var(--text-normal);
+}
+.button:hover {
+    cursor: pointer;
+}
+.previous {
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.previous:after {
+    height: 100%;
+    width: 50px;
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(to right, var(--background-primary) 20%, var(--background-primary-transparent) 80%);
+}
+.next {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.next:before {
+    height: 100%;
+    width: 50px;
+    content: "";
+    pointer-events: none;
+    background: linear-gradient(to left, var(--background-primary) 20%, var(--background-primary-transparent) 80%);
+}

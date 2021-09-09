@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+}
+.type {
+    padding: 0.6rem 0.65rem;
+    transition: all 0.3s;
+    border-radius: 0.35rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.15rem;
+    border: 1px solid transparent;
+}
+.type.active {
+    border: 1px solid var(--border-input)
+}
+.type path {
+    fill: var(--text-normal);
+}
+.type:hover {
+    cursor: pointer;
+    background: var(--background-tertiary);
+}

@@ -1,0 +1,220 @@
+[type="checkbox"] + span:not(.lever) {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  line-height: 30px;
+  font-size: 1rem;
+  user-select: none;
+}
+[type="checkbox"] + span:not(.lever):before,
+[type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 0;
+  border: 2px solid #e0e4e6;
+  border-radius: 0.2rem;
+  margin-top: 4px;
+  transition: 0.2s;
+}
+[type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+  border: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:not(:checked):disabled + span:not(.lever):before {
+  border: none;
+  background-color: var(--background-dark);
+}
+[type="checkbox"].tabbed:focus + span:not(.lever):after {
+  transform: scale(1);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+[type="checkbox"]:checked + span:not(.lever):before {
+  top: -4px;
+  left: -2px;
+  width: 8px;
+  height: 18px;
+  border-color: transparent #0da26d #0da26d transparent;
+  border-style: solid;
+  border-width: 2px;
+  transform: rotate(40deg);
+  backface-visibility: hidden;
+  transform-origin: 100% 100%;
+}
+[type="checkbox"]:checked:disabled + span:before {
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+}
+[type="checkbox"]:indeterminate + span:not(.lever):before {
+  top: -11px;
+  left: -12px;
+  width: 10px;
+  height: 22px;
+  border: none;
+  border-right: 2px solid #7286e9;
+  transform: rotate(90deg);
+  backface-visibility: hidden;
+  transform-origin: 100% 100%;
+}
+[type="checkbox"]:indeterminate:disabled + span:not(.lever):before {
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  background-color: transparent;
+}
+[type="checkbox"].filled-in + span:not(.lever):after {
+  border-radius: 2px;
+}
+[type="checkbox"].filled-in + span:not(.lever):after,
+[type="checkbox"].filled-in + span:not(.lever):before {
+  content: "";
+  left: 0;
+  position: absolute;
+  transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s,
+    height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
+  z-index: 1;
+}
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):before {
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  left: 6px;
+  top: 10px;
+  transform: rotate(37deg);
+  transform-origin: 100% 100%;
+}
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid #5a5a5a;
+  top: 0;
+  z-index: 0;
+}
+[type="checkbox"].filled-in:checked + span:not(.lever):before {
+  top: 0;
+  left: 1px;
+  width: 8px;
+  height: 13px;
+  border-color: transparent #fff #fff transparent;
+  border-style: solid;
+  border-width: 2px;
+  transform: rotate(37deg);
+  transform-origin: 100% 100%;
+}
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7286e9;
+  background-color: #7286e9;
+  z-index: 0;
+}
+[type="checkbox"].filled-in.tabbed:focus + span:not(.lever):after {
+  border-radius: 2px;
+  border-color: #5a5a5a;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+[type="checkbox"].filled-in.tabbed:checked:focus + span:not(.lever):after {
+  border-radius: 2px;
+  background-color: #7286e9;
+  border-color: #7286e9;
+}
+[type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):before {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+[type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):after {
+  border-color: transparent;
+  background-color: #949494;
+}
+[type="checkbox"].filled-in:disabled:checked + span:not(.lever):before {
+  background-color: transparent;
+}
+[type="checkbox"].filled-in:disabled:checked + span:not(.lever):after {
+  background-color: #949494;
+  border-color: #949494;
+}
+.switchInput,
+.switchInput * {
+  user-select: none;
+}
+.switchInput label {
+  cursor: pointer;
+}
+.switchInput label input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+.switchInput label input[type="checkbox"]:checked + .lever {
+  background-color: #7286e9;
+}
+.switchInput label input[type="checkbox"]:checked + .lever:after,
+.switchInput label input[type="checkbox"]:checked + .lever:before {
+  left: 18px;
+}
+.switchInput label input[type="checkbox"]:checked + .lever:after {
+  background-color: #7286e9;
+}
+.switchInput label .lever {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 36px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.38);
+  border-radius: 15px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin-right: 16px;
+}
+.switchInput label .lever:after,
+.switchInput label .lever:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0;
+  top: -3px;
+  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease,
+    transform 0.1s ease;
+}
+.switchInput label .lever:before {
+  background-color: rgba(243, 153, 162, 0.15);
+}
+.switchInput label .lever:after {
+  background-color: #f1f1f1;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.switchInput
+  input[type="checkbox"]:checked:not(:disabled).tabbed:focus
+  ~ .lever:before,
+input[type="checkbox"]:checked:not(:disabled) ~ .lever:active:before {
+  transform: scale(2.4);
+  background-color: rgba(243, 153, 162, 0.15);
+}
+.switchInput input[type="checkbox"]:not(:disabled).tabbed:focus ~ .lever:before,
+input[type="checkbox"]:not(:disabled) ~ .lever:active:before {
+  transform: scale(2.4);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.switchInput input[type="checkbox"][disabled] + .lever {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.switchInput label input[type="checkbox"][disabled] + .lever:after,
+.switchInput label input[type="checkbox"][disabled]:checked + .lever:after {
+  background-color: #949494;
+}

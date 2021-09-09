@@ -1,0 +1,28 @@
+.discord .avatar img {
+    border-radius: 0.35rem;
+    height: 45px;
+    width: 45px;
+}
+.discord .avatar svg {
+    margin: 0 !important;
+}
+.discord .account {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--border-primary);
+    border-radius: 0.35rem;
+    background: var(--background-primary);
+    color: var(--text-normal)
+}
+.discord .account:focus {
+    outline: none;
+}
+.discord .account:hover {
+    cursor: pointer;
+    background: var(--background-secondary);
+}
+.discord .account svg {
+    margin-right: 0.35rem;
+}

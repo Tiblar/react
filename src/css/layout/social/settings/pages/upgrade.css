@@ -1,0 +1,28 @@
+.tier {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--border-secondary);
+  border-radius: 0.3em;
+  padding: 1em;
+  user-select: text !important;
+}
+.tier h2 {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+}
+.tier label {
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+.tier hr {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.tier li {
+  list-style: none;
+  padding-top: 0.75em;
+}
+.tier span {
+  margin-left: 0.65em;
+}

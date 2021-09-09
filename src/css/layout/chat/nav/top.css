@@ -1,0 +1,23 @@
+.username {
+  border-left: 1px solid #d9d9db;
+}
+.username h3 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  margin: 0 0 0 0.45em;
+  color: var(--text-muted);
+}
+.username svg > path {
+  fill: var(--text-muted);
+}
+.back {
+  margin-right: 1em;
+}
+.topDot {
+  position: unset;
+  margin-left: 0.7em;
+  align-self: center;
+}
+.left {
+  margin-left: 0.65em;
+}

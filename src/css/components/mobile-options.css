@@ -1,0 +1,77 @@
+@media screen and (max-height: 600px) {
+    .container .optionGroup .option {
+        padding: 0.5rem 1rem !important;
+    }
+}
+
+.container {
+    position: fixed;
+    background: rgba(56, 61, 68, 0.95);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+}
+.container .options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex: 1;
+    transform: scale(0.95) translateY(10%);
+    animation: show 0.1s forwards;
+}
+@keyframes show {
+    100% {
+        transform: scale(1) translateY(0%);
+    }
+}
+.container .optionGroup:first-child {
+    margin-top: auto;
+}
+.container .optionGroup {
+    background: var(--background-primary);
+    color: var(--link-color);
+    border-radius: 0.35rem;
+    margin: 0.5rem 1rem;
+}
+.container .optionGroup .info {
+    display: flex;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    justify-content: center;
+    color: var(--text-normal);
+}
+.container .optionGroup .date {
+    display: flex;
+    align-items: center;
+}
+.container .optionGroup .date svg {
+    margin-right: 0.5rem;
+}
+.container .optionGroup .option:not(:first-child) {
+    border-top: 1px solid var(--border-primary);
+}
+.container .optionGroup .option {
+    padding: 0.95rem 1rem;
+    text-align: center;
+}
+.container .optionGroup .option:hover {
+    cursor: pointer;
+}
+.container .optionGroup .option.danger p {
+    color: #eb4949;
+}
+.container .optionGroup .option p {
+    flex: 1;
+    color: var(--link-color);
+}
+.container .optionGroup .option svg {
+    margin-right: 0.5rem;
+}

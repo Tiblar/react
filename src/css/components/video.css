@@ -1,0 +1,56 @@
+@media screen and (max-width: 800px) {
+    .top, .userInfo, .comments {
+        margin: 1rem !important;
+    }
+    .video .body {
+        margin: 0 1rem;
+    }
+    .video .userInfo .user h3 {
+        font-size: 1rem;
+    }
+    .video .userInfo .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.video {
+    max-width: 900px;
+}
+.video :global(.plyr) {
+    border-radius: 0.2rem;
+}
+.video .top {
+    display: flex;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-secondary);
+}
+.video .info {
+    flex: 1;
+}
+.video .info h3 {
+    margin-bottom: 0.5rem;
+}
+.video .info .subTitle {
+    display: flex;
+}
+.video .info .subTitle p {
+    color: var(--text-muted);
+}
+.video .userInfo {
+    display: flex;
+    margin: 1rem 0;
+}
+.video .userInfo .user {
+    margin-left: 1rem;
+}
+.video .userInfo .followButton {
+    margin-left: auto;
+}
+.video .comments {
+    margin: 1rem 0;
+    border: 1px solid var(--border-secondary);
+    padding: 1rem;
+    border-radius: 0.2rem;
+}

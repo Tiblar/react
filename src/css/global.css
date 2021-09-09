@@ -1,0 +1,199 @@
+@import '~react-quill/dist/quill.snow.css';
+
+@font-face {
+  font-family: "Work Sans Light";
+  src: url("../assets/fonts/WorkSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans SemiBold";
+  src: url("../assets/fonts/WorkSans-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/WorkSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans SemiBold";
+  src: url("../assets/fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Franxurter";
+  src: url("../assets/fonts/Franxurter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outrun Future";
+  src: url("../assets/fonts/OutrunFuture.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cyberpunk";
+  src: url("../assets/fonts/Cyberpunk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fraktur";
+  src: url("../assets/fonts/Fraktur.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0 !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: var(--background-primary);
+  scrollbar-color: #dfdfdf transparent;
+  height: 100%;
+}
+hr {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(115, 115, 115, 0.08);
+  border-left-width: 0;
+  border-right-width: 0;
+}
+p, h1, h2, h3, h4, h5, h6, span, li, label {
+  margin: 0;
+  color: var(--text-normal);
+  font-family: "Open Sans", sans-serif;
+}
+small {
+  font-size: 12px;
+  color: var(--text-normal);
+}
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--link-color-hover);
+}
+strong {
+  font-family: "Open Sans SemiBold", sans-serif;
+}
+textarea {
+  resize: vertical;
+}
+table {
+  border: 1px solid #ababab;
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+table {
+  border-spacing: 5px;
+  width: 100%;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+:global(.ql-container) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+:global(.ql-editor) {
+  flex: 1;
+  font-size: 16px !important;
+}
+:global(.ql-snow .ql-tooltip){
+  z-index: 2;
+}
+:global(.__react_component_tooltip.type-dark) span {
+  color: #ffffff;
+}
+:global(.Toastify__toast) {
+  border-radius: 0.35rem;
+  min-height: 48px;
+  background: var(--background-primary);
+}
+:global(.Toastify__toast-body) {
+  color: var(--text-normal);
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+}
+:global(.Toastify__close-button) {
+  color: var(--text-normal);
+}
+:global(.Toastify__toast--error) {
+  background: #e74c3c !important;
+}
+:global(.Toastify__toast--error .Toastify__toast-body) {
+  color: #ffffff !important;
+}
+:global(.Toastify__toast--error .Toastify__close-button) {
+  color: #ffffff !important;
+}
+:global(.Toastify__progress-bar--default) {
+  background: #7286e9;
+}
+:global(.pcr-app) {
+  position: absolute !important;
+  top: auto !important;
+  left: 60px !important;
+}
+
+[class*="tbRow"] {
+  display: flex;
+  flex-direction: row;
+}
+[class*="tbRow"] > :first-child {
+  margin-left: 0 !important;
+}
+[class*="tbRow"] > :last-child {
+  margin-right: 0 !important;
+}
+[class*="tbCol"] {
+  flex-basis: calc(
+    (8.33333% * var(--tb-col-count) - var(--tb-horizontal-layout-gutter) * 2) +
+      var(--tb-horizontal-layout-gutter) * 2
+  );
+  max-width: calc(
+    (8.33333% * var(--tb-col-count) - var(--tb-horizontal-layout-gutter) * 2) +
+      var(--tb-horizontal-layout-gutter) * 2
+  );
+  margin-right: var(--tb-horizontal-layout-gutter);
+  margin-left: var(--tb-horizontal-layout-gutter);
+  box-sizing: border-box;
+}

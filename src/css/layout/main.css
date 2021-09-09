@@ -1,0 +1,48 @@
+@media screen and (max-width: 600px) {
+  .topNav {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+  }
+}
+.container {
+  position: relative;
+  flex: 1;
+}
+.cover {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.cover svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.topNav {
+  display: flex;
+  align-items: center;
+  background: var(--background-primary);
+  border-bottom: 1px solid var(--nav-border-secondary);
+  height: 60px;
+}
+.bottomContent {
+  display: flex;
+  flex: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}

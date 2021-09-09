@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+}
+.row .emoji {
+    padding: 0.2rem;
+    border-radius: 0.25rem;
+    line-height: 0;
+}
+.row .emoji:not(:first-child) {
+    margin-left: 0.1rem;
+}
+.row .emoji:hover {
+    background: rgba(0, 0, 0, .1);
+}

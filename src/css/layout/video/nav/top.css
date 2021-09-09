@@ -1,0 +1,11 @@
+.buttonLive {
+    border-radius: 10em;
+    background: #EBEEFF;
+    color: #3751FF;
+    font-weight: bold;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 14px;
+}
+.active {
+    border: 1px solid #3751FF;
+}

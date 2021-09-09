@@ -1,0 +1,116 @@
+.popup {
+    display: flex;
+    position: absolute;
+    width: 600px;
+    border: 1px solid var(--border-secondary);
+    border-radius: 0.35rem;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    left: calc(100% + 15px);
+    background: var(--background-primary);
+    z-index: 5;
+    min-height: 460px;
+    overflow: hidden;
+}
+.listContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.item {
+    display: flex;
+    padding: 0.5rem;
+}
+.item .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.item:hover {
+    background: var(--background-tertiary);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.item .new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto !important;
+}
+.new .badge {
+    display: flex;
+    color: #ffffff;
+    background: #15de97;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.35rem;
+    line-height: 14px;
+    font-size: 11px;
+}
+.icon {
+    display: flex;
+    flex-basis: 50px;
+    margin-left: 10px;
+}
+.icon.heart path {
+    fill: #f34343
+}
+.icon.reblog path {
+    fill: #7286e9
+}
+.icon.follow path {
+    fill: #15de97
+}
+.icon.unfollow path {
+    fill: var(--text-normal);
+}
+.icon.request path {
+    fill: #15de97;
+}
+.icon.mention path {
+    fill: #7286e9;
+}
+.item .info {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.item .post {
+    margin-top: 0.5rem;
+}
+.item .info .people {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.item .info .people > div:not(:first-child) {
+    margin-left: 0.5rem;
+}
+.item .info .text {
+    font-family: "Work Sans", sans-serif;
+    margin-left: 1rem;
+}
+.item .info .date {
+    margin-left: 0.5rem;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.item .postLink {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.listContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.user {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.1s;
+}
+.user:hover {
+    background: var(--background-tertiary);
+}

@@ -1,0 +1,89 @@
+:global(.cozy-theme-profile) {
+    --primary-color: #7286e9;
+    --link-color: #7678ac;
+    --link-color-hover: #6468d4;
+    --background-primary: #1a1a1a;
+    --background-primary-transparent: rgba(26, 26, 26, 0);
+    --background-secondary: #3c3c3c;
+    --background-tertiary: #535353;
+    --background-layer: var(--background-primary);
+    --background-portal: #1a1a1a;
+    --background-grey: #444343;
+    --background-dark: #383838;
+    --background-input: #444444;
+    --background-poll: #616161;
+    --background-poll-active: #626ec3;
+    --border-primary: #2d2e2f;
+    --border-secondary: #2d2d2d;
+    --border-tertiary: #3e3e3e;
+    --border-input: #4e4f50;
+    --border-input-focus: #7292c3;
+    --text-placeholder: #8b9197;
+    --header-primary: #ffffff;
+    --text-normal: #d7d7d7;
+    --text-muted: #bfbfbf;
+    --text-light: #b3b7c6;
+    --header-border-radius: 0;
+    --nav-tab: #0075c1;
+    --nav-tab-active: #0075c1;
+    --nav-border-primary: #005895;
+    --nav-border-secondary: #005895;
+    --sidebar-logo: #898989;
+    --sidebar-active: rgba(49, 49, 49, 0.6);
+    --sidebar-hover: rgba(49, 49, 49, 0.35);
+    --sidebar-text: #d7d7d7;
+    --sidebar-title: #d7d7d7;
+    --sidebar-icons: #bfbfbf;
+    --sidebar-icons-shadow: transparent;
+    --sidebar-notification: #15de97;
+    --button-background: #4e4e4e;
+    --button-hover-box-shadow: rgba(35, 35, 35, 0.3);
+    --button-background-disabled: #6c6c6c;
+    --button-background-color: #3a2a44;
+    --button-text: #d7d7d7;
+    --button-fill: #bfbfbf;
+    --button-group-background: #484848;
+    --button-group-background-hover: #404040;
+    --post-border-radius: 0;
+    --post-link-background: #6a6a6a;
+    --post-header-border: #006bb1;
+    --post-header-text: #006bb1;
+    --post-reply-timestamp: #006bb1;
+    --post-box-shadow: 3px 5px #006bb1;
+    --post-box-shadow-mobile: 0 -3px 3px rgba(0, 0, 0, 0.2);
+    --profile-header: #0094ff;
+    --interaction-liked: #4e3d3d;
+    --interaction-liked-border-hover: #443535;
+    --interaction-liked-background-hover: #443535;
+    --interaction-secondary-hover: #3b2c2c;
+    --interaction-success: #414e3d;
+    --interaction-success-hover: #303b2c;
+    --interaction-purple: #454856;
+    --interaction-purple-border-hover: #454856;
+    --profile-background: #4a4a4a;
+    --loader-background: #5c5c5c;
+    --loader-foreground: #767676;
+    --alert-blue-background: #484855;
+}
+
+.background {
+    background: url(../../assets/themes/backgrounds/cozy.jpg) no-repeat 50% fixed!important;
+    background-size: cover!important;
+}
+
+.leftNav {
+    background: transparent !important;
+}
+
+.rightNav {
+    background: transparent !important;
+}
+
+.topNav {
+    background: transparent !important;
+}
+
+.username {
+    font-family: "Outrun Future", sans-serif;
+    color: #ff073a;
+}

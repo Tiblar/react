@@ -1,0 +1,87 @@
+:global(.cyberpunk-theme-profile) {
+    --primary-color: #7286e9;
+    --link-color: #eeff00;
+    --link-color-hover: #c9d700;
+    --background-primary: #1a1a1a;
+    --background-primary-transparent: rgba(26, 26, 26, 0);
+    --background-secondary: #3c3c3c;
+    --background-tertiary: #535353;
+    --background-layer: var(--background-primary);
+    --background-portal: #1a1a1a;
+    --background-grey: #444343;
+    --background-dark: #383838;
+    --background-input: #444444;
+    --background-poll: #616161;
+    --background-poll-active: #626ec3;
+    --border-primary: #7b68ee;
+    --border-secondary: #7b68ee;
+    --border-tertiary: #3e3e3e;
+    --border-input: #4e4f50;
+    --border-input-focus: #7292c3;
+    --text-placeholder: #8b9197;
+    --header-primary: #ffffff;
+    --text-normal: #d7d7d7;
+    --text-muted: #bfbfbf;
+    --text-light: #b3b7c6;
+    --header-border-radius: 0;
+    --nav-tab: #39ce5a;
+    --nav-tab-active: #39ce5a;
+    --nav-border-primary: #2e8b57;
+    --nav-border-secondary: #2e8b57;
+    --sidebar-active: rgba(49, 49, 49, 0.6);
+    --sidebar-hover: rgba(49, 49, 49, 0.35);
+    --sidebar-text: #e424c1;
+    --sidebar-title: #04d5fb;
+    --sidebar-icons: #e424c1;
+    --sidebar-icons-shadow: #e424c1;
+    --sidebar-notification: #e424c1;
+    --button-background: #4e4e4e;
+    --button-hover-box-shadow: rgba(35, 35, 35, 0.3);
+    --button-background-disabled: #6c6c6c;
+    --button-background-color: #3a2a44;
+    --button-text: #d7d7d7;
+    --button-fill: #bfbfbf;
+    --button-group-background: #484848;
+    --button-group-background-hover: #404040;
+    --post-border-radius: 0;
+    --post-link-background: #6a6a6a;
+    --post-header-border: #04d5fb;
+    --post-header-text: #04d5fb;
+    --post-reply-timestamp: #e424c1;
+    --post-box-shadow: 3px 5px #7b68ee;
+    --post-box-shadow-mobile: 0 0 1px #04d5fb;
+    --profile-header: #0094ff;
+    --interaction-liked: #4e3d3d;
+    --interaction-liked-border-hover: #443535;
+    --interaction-liked-background-hover: #443535;
+    --interaction-secondary-hover: #3b2c2c;
+    --interaction-success: #414e3d;
+    --interaction-success-hover: #303b2c;
+    --interaction-purple: #454856;
+    --interaction-purple-border-hover: #454856;
+    --profile-background: #4a4a4a;
+    --loader-background: #5c5c5c;
+    --loader-foreground: #767676;
+    --alert-blue-background: #484855;
+}
+
+.background {
+    background: url(../../assets/themes/backgrounds/cyberpunk.png) fixed repeat top #000;
+}
+
+.leftNav {
+    background: transparent !important;
+}
+
+.rightNav {
+    background: transparent !important;
+}
+
+.topNav {
+    background: transparent !important;
+}
+
+.username {
+    font-family: "Cyberpunk", sans-serif;
+    color: #ff073a;
+}

@@ -1,0 +1,128 @@
+.friendsContainer {
+  display: flex;
+  flex-basis: 440px;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  background: #ffffff;
+}
+.friendContainer {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  cursor: pointer;
+}
+.friendContainer:hover {
+  background: #f9f9f9;
+}
+.friendUsername {
+  font-family: "Work Sans SemiBold", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  color: var(--text-muted);
+}
+.friendLastMessage {
+  font-size: 13px;
+  color: #4b5157;
+}
+:global(#floating_svg__Cloud1) {
+  animation: cloud1 7s linear infinite;
+}
+@keyframes cloud1 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+:global(#floating_svg__Cloud2) {
+  animation: cloud2 5s linear infinite;
+}
+@keyframes cloud2 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+:global(#floating_svg__Cloud3) {
+  animation: cloud3 7s linear infinite;
+}
+@keyframes cloud3 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+:global(#floating_svg__Cloud4) {
+  animation: cloud4 6s linear infinite;
+}
+@keyframes cloud4 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+:global(#floating_svg__Cloud5) {
+  animation: cloud5 7s linear infinite;
+}
+@keyframes cloud5 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+:global(#floating_svg__Cloud6) {
+  animation: cloud6 6s linear infinite;
+}
+@keyframes cloud6 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+.channelsNav {
+  display: flex;
+  border-bottom: 1px solid #e7e7e9;
+}
+.channelsNavItem {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 0.5em;
+  border-radius: 0.35em;
+  margin: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.channelsNavItem:hover {
+  background: #f1f1f1;
+}
+.channelsNavItem.active {
+  background: #f1f1f1;
+  cursor: unset !important;
+}
+.channelsNavNotification {
+  padding: 0 0.55em;
+  background: #15de97;
+  border-radius: 0.4em;
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5em;
+}

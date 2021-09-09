@@ -1,0 +1,35 @@
+@media screen and (max-width: 800px) {
+    .container {
+        left: 10px !important;
+        right: 10px !important;
+        top: unset !important;
+        bottom: 30px;
+    }
+    .container button {
+        margin-left: auto !important;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 10000;
+    background: var(--background-primary);
+    padding: 1rem;
+    border: 1px solid var(--border-primary);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .1);
+    border-radius: 0.35rem;
+    top: 20px;
+    left: 95px;
+}
+.container svg {
+    margin-right: 0.5rem;
+    color: var(--text-normal);
+}
+.container svg:hover {
+    cursor: pointer;
+}
+.container button {
+    margin-left: 1rem;
+}

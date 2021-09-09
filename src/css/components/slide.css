@@ -1,0 +1,65 @@
+@media screen and (max-width: 800px) {
+    .slide {
+        max-width: 98% !important;
+    }
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 50%;
+    max-height: 90%;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.centerSlide {
+    right: 0;
+    left: 0;
+}
+.leftSlide {
+    right: 95vw;
+}
+.rightSlide {
+    left: 95vw;
+}
+.loading {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.loading circle {
+    stroke: #ffffff;
+}
+.centerLoading {
+    right: 0;
+    left: 0;
+}
+.leftLoading {
+    left: -120%;
+    right: 0;
+}
+.rightLoading {
+    right: 0;
+    left: 90%;
+}
+.mobileNav {
+    width: 100%;
+    background: var(--background-primary);
+    display: flex;
+    flex-direction: column;
+}
+.mobileNav .top {
+    display: flex;
+    padding: 1%;
+    z-index: 10;
+}
+.mobileNav .buttons {
+    display: flex;
+    padding: 1%;
+    margin-top: auto;
+    margin-bottom: 25px;
+    z-index: 10;
+}

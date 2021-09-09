@@ -1,0 +1,38 @@
+@media screen and (max-width: 1170px) {
+    .analytics {
+        flex-direction: column!important;
+    }
+    .analytics h4 {
+        margin-left: 1rem;
+    }
+    .analytics .main {
+        width: 100%!important;
+    }
+    .analytics .main .nav {
+        overflow: auto!important;
+    }
+    .sidebar {
+        margin-top: 1rem;
+        width: 100%!important;
+        max-width: 700px!important;
+    }
+}
+.analytics {
+    display: flex;
+    position: relative;
+}
+.analytics .main {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    position: relative;
+    width: calc(100% - 390px);
+    max-width: 700px
+}
+.analytics .main .nav {
+    overflow: unset;
+}
+.sidebar {
+    width: 390px;
+    margin-top: 25px;
+}

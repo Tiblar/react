@@ -1,0 +1,11 @@
+.popupShow {
+    transform: scale(.97) translateX(3%);
+
+    animation: popupShow 0.25s forwards;
+
+}
+@keyframes popupShow {
+    100% {
+        transform: scale(1) translateX(0%);
+    }
+}

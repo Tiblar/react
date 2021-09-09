@@ -1,0 +1,420 @@
+@media screen and (max-width: 1200px) {
+    .dropAreaWrapper {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .dropAreaSmallWrapper {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .modal {
+        width: 99% !important;
+        max-width: 99% !important;
+        min-width: 99% !important;
+        margin: auto !important;
+    }
+    .containerInner {
+        width: 99% !important;
+    }
+}
+
+.mobile .wrapper {
+    height: 100%;
+    background: var(--background-primary) !important;
+}
+.mobile .containerInner {
+    width: 100% !important;
+    height: 100%;
+}
+.mobile .modalContainer {
+    height: 100%;
+}
+.mobile .modal {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: auto !important;
+    height: 100%;
+    border: none !important;
+    border-radius: 0 !important;
+    display: flex;
+    flex-direction: column;
+}
+.mobile .modal .content {
+    flex: 1 0 auto;
+}
+.mobile .modal .content .body {
+    flex: 1;
+}
+
+.containerOuter {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 61, 68, 0.95);
+    z-index: 1000;
+    display: flex;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: auto;
+    max-height: 100%;
+    overflow: auto;
+}
+@keyframes popupShow {
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+.containerInner {
+    margin: auto;
+}
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal {
+    border: 1px solid #202326;
+    border-radius: 0.35em;
+    background: var(--background-primary);
+    max-width: 650px;
+    width: 550px;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.error{
+    animation: error 0.3s;
+}
+@keyframes error {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-2deg); }
+    20% { transform: translate(-3px, 0px) rotate(2deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(2deg); }
+    50% { transform: translate(-1px, 2px) rotate(-2deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-2deg); }
+    80% { transform: translate(-1px, -1px) rotate(2deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-2deg); }
+}
+.profile {
+    border-radius: 0.35rem;
+    margin-right: 25px;
+}
+.profile div {
+    background-size: 65px 65px !important;
+    height: 65px;
+    width: 65px;
+    box-shadow: none;
+}
+.top {
+    padding: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header button {
+    border: 0;
+    padding: 0.5rem !important;
+    margin-left: auto;
+    background: transparent;
+}
+.postType {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
+    color: #5f6469;
+    fill: #5f6469;
+}
+.postType:hover {
+    cursor: pointer;
+}
+.postType > span {
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+.postType span > svg {
+    margin-left: 0.45rem;
+}
+.postType span svg > path {
+    fill: inherit;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+}
+.body :global(.quill) {
+    background: var(--background-input);
+    user-select: text;
+}
+.body :global(.ql-snow .ql-stroke) {
+    stroke: var(--text-normal);
+}
+.body :global(.ql-snow .ql-picker-options) {
+    background: var(--background-primary);
+}
+.body :global(.ql-container.ql-snow), :global(.ql-toolbar.ql-snow) {
+    border-width: 0 !important;
+}
+.body :global(.ql-editor) {
+    padding: 1rem 1rem 5rem;
+    user-select: text;
+}
+:global(.ql-editor) h1, :global(.ql-editor) h2, :global(.ql-editor) h3, :global(.ql-editor) p {
+    margin-bottom: 0.35rem !important;
+}
+.body :global(.ql-editor) p, li, :global(.ql-editor.ql-blank)::before {
+    font-size: 1rem;
+}
+:global(.ql-editor.ql-blank)::before {
+    color: var(--text-placeholder);
+}
+.body :global(.ql-container.ql-snow), .body :global(.ql-toolbar.ql-snow) {
+    border: none;
+}
+.body :global(.ql-picker):focus, :global(.ql-picker-label):focus, :global(.ql-picker-item),
+:global(.ql-snow.ql-toolbar) button {
+    outline: none !important;
+}
+.body :global(.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label) {
+    border: none;
+}
+.body :global(.ql-tooltip.ql-editing.ql-flip) {
+    left: 10px !important;
+}
+.optionButton {
+    position: absolute;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 0;
+    z-index: 1;
+    padding: 0.5rem 0.75rem;
+}
+.removeButton {
+    top: 0.5rem;
+    z-index: 100;
+    animation: showButtons 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.rotateButton {
+    top: calc(1.5rem + 22px);
+    animation: showButtons 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.rowAddButton {
+    position: absolute;
+    z-index: 1;
+    left: 0.5rem;
+    top: calc(0.5rem);
+    background: rgba(255, 255, 255, 0.7);
+    border: 0;
+    padding: 0.5rem 0.75rem;
+}
+button.hide {
+    animation: hideButtons 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
+}
+.content .title {
+    display: flex;
+    padding: 0.6rem 1rem;
+}
+.content .title input[type="text"] {
+    padding: 0.6rem 1rem;
+}
+.content .title input[type="text"]:focus, .content .body:focus-within,
+.tagInput:focus, .option input:focus, .question input:focus {
+    transition: all 0.2s;
+    border: 1px solid #acaeb1;
+}
+.content .body {
+    margin: 0.6rem 1rem;
+    border: 1px solid var(--border-input);
+    border-radius: 0.2rem;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6rem 1rem;
+    border: 1px solid var(--border-input);
+    border-radius: 0.2rem;
+}
+.thumbnail {
+    width: 90px;
+    border-radius: 4px;
+}
+@keyframes showButtons {
+    0% {
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+@keyframes hideButtons {
+    100% {
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    0% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+.input {
+    display: none;
+}
+.poll {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem 1rem;
+}
+.poll .question {
+    display: flex;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+.poll .option {
+    display: flex;
+    flex: 1;
+}
+.poll .option button {
+    margin-left: 0.5rem;
+}
+.poll .option:not(:first-child) {
+    margin-top: 0.5rem;
+}
+.poll .addOption {
+    margin-top: 0.5rem;
+}
+.tagInput {
+    margin: 0.6rem 1rem;
+    border-radius: 0.2rem;
+}
+.nsfw {
+    margin: 0.6rem 1rem;
+}
+.footer {
+    display: flex;
+    padding: 1em;
+    z-index: 1;
+    background: var(--background-secondary);
+    border-top: 1px solid #d8d8d8;
+    margin-top: 0.65rem;
+    border-bottom-right-radius: 0.35rem;
+    border-bottom-left-radius: 0.35rem;
+}
+.footer button {
+    margin-right: 0.5em;
+}
+.submitButton circle {
+    stroke: #fff;
+}
+.dropAreaWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 0.5rem;
+    position: absolute;
+}
+.dropAreaWrapper button {
+    background: rgba(255, 255, 255, .15);
+    color: rgba(255, 255, 255, .80) !important;
+}
+.dropAreaWrapper .dropArea {
+    padding: 1rem;
+    border: 2px dashed #d8dadc;
+    background: rgba(255, 255,255, 0.15);
+    color: #aaa;
+    border-radius: 0.35em;
+    transition: all 0.3s;
+    margin-bottom: 0.5rem;
+}
+.dropAreaWrapper .dropArea .input {
+    display: none;
+}
+.dropAreaWrapper .dropArea:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+.dropAreaWrapper .dropArea svg :global(.upload_svg__cloud) {
+    fill: rgba(255, 255,255, 0.65);
+}
+.dropAreaWrapper .dropArea svg :global(.upload_svg__arrow) {
+    fill: rgba(255, 255,255, 0.65);
+}
+.dropAreaWrapper .dropArea svg :global(.upload_svg__main_cloud) {
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: cloudfloating;
+    animation-timing-function: ease-in-out;
+    fill: rgba(255, 255,255, 0.65);
+    transition: all 0.3s;
+}
+@keyframes cloudfloating {
+    0% {
+        transform: translate3d(0,-2px,0);
+    }
+    100% {
+        transform: translate3d(0,2px,0);
+    }
+}
+.dropAreaWrapper .dropArea.active {
+    background: rgba(216, 216, 255, 0.35);
+    border: 2px solid #2c33dc;
+    cursor: pointer;
+}
+
+.dropAreaSmallWrapper {
+    display: flex;
+    padding: 0.6rem 1rem;
+}
+.dropAreaSmallWrapper .dropArea {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    background-color: #fbfbfb;
+    border-radius: 0.35rem;
+    border: 2px dashed #ced4da;
+    padding: 1rem;
+}
+.dropAreaSmallWrapper .dropArea:hover {
+    cursor: pointer;
+}
+.dropAreaSmallWrapper .dropArea .input {
+    display: none;
+}
+.dropAreaSmallWrapper p {
+    color: #5d5d5d;
+    font-family: "Work Sans SemiBold", sans-serif;
+}
+.dropAreaSmallWrapper .dropArea.active p {
+    color: #2c33dc;
+}
+.dropAreaSmallWrapper .dropArea.active {
+    background: rgba(216, 216, 255, 0.35);
+    border: 2px solid #2c33dc;
+    cursor: pointer;
+}

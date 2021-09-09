@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex: 1;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    width: 80%;
+}
+.info {
+}
+.info h1 {
+    display: flex;
+}
+.info svg {
+    margin-right: 0.75rem;
+}
+.graphic {
+    max-width: 768px;
+    max-height: 80%;
+}

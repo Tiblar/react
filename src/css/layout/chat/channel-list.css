@@ -1,0 +1,16 @@
+.channel {
+    padding: 0.55em 0.75em;
+    margin-top: 0.2em;
+    color: var(--text-muted);
+    border-radius: 0.35em;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: normal;
+}
+.channel:hover {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.channel.active {
+    background-color: #f7f7f7;
+}

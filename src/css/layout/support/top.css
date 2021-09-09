@@ -1,0 +1,62 @@
+.nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-height: 3.25rem;
+    position: relative;
+}
+.border {
+    border-bottom: 1px solid #eeeeee;
+}
+.navBrand {
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 3.25rem;
+}
+.navBrand a {
+    align-items: center;
+    display: flex;
+}
+.navBrand img {
+    max-height: 1.75rem;
+}
+.menu {
+    margin-left: auto;
+}
+.items {
+    display: flex;
+    align-items: center;
+}
+.item {
+    padding: .35rem .75rem;
+    margin-left: 0.5rem;
+    border-radius: 0.35rem;
+    color: #4a4a4a;
+}
+.item:hover {
+    cursor: pointer;
+    background: #f7f7f7;
+}
+.hamburger {
+    margin-left: auto;
+    cursor: pointer;
+}
+.hamburger path {
+    fill: #4a4a4a;
+}
+.hamburgerMenu {
+    position: absolute;
+    padding: 1rem;
+    border: 1px solid black;
+    top: 100%;
+    width: 90%;
+    margin-left: auto;
+    background: #fff;
+}
+.hamburgerMenu .items {
+    flex-direction: column;
+}
+.hamburgerMenu .item {
+    margin-top: 1rem;
+}

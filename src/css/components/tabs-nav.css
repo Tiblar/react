@@ -1,0 +1,99 @@
+.nav {
+    display: flex;
+    border-bottom: 1px solid var(--border-secondary);
+    padding: 0 1.5rem;
+    overflow: auto;
+}
+.nav.line {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    white-space: nowrap;
+    border-bottom: none;
+    padding: unset;
+}
+.nav .pages {
+    display: flex;
+    flex: 1;
+    min-height: 50px;
+}
+.nav.line .pages {
+    align-items: center;
+    border-bottom-color: var(--nav-tab);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    min-height: unset;
+}
+.nav.line .pages .page {
+    margin-right: unset;
+    margin-left: unset;
+    margin-bottom: -2px;
+    border-bottom-color: var(--nav-tab);
+    border-bottom-width: 2px;
+    align-items: center;
+    border-bottom-style: solid;
+    color: var(--nav-tab);
+    display: flex;
+    justify-content: center;
+    padding: .5em 1em;
+    vertical-align: top;
+    transition : border 0.2s ease-in-out;
+}
+.nav.line .pages .page:hover {
+    border-bottom-color: #dbdbdb;
+}
+.nav.line .pages .page.active {
+    border-bottom-color: #7286e9;
+    position: relative;
+    border-radius: unset;
+    height: auto;
+    width: auto;
+    background: unset;
+}
+.nav.line .pages .page.active > * {
+    color: #7286e9 !important;
+}
+.nav .pages .page:first-child {
+    margin-left: 0;
+}
+.nav .pages .page {
+    font-size: 1rem;
+    display: flex;
+    position: relative;
+    padding: 0 0.75rem;
+    margin: 0 0.5rem;
+}
+.nav .pages .page label {
+    margin: auto;
+    color: var(--nav-tab);
+    white-space: nowrap;
+}
+.nav .pages .page label > svg {
+    margin-right: 0.5rem;
+}
+.nav .pages .page:hover, .nav .pages .page label:hover {
+    cursor: pointer;
+}
+.nav .pages .page .active {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 8px 8px 0 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: var(--nav-tab-active);
+    margin-top: auto;
+    opacity: 0;
+    animation: active-transition 0.6s forwards;
+}
+@keyframes active-transition {
+    100% {
+        opacity: 1;
+    }
+}

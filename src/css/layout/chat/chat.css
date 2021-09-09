@@ -1,0 +1,16 @@
+.channelContainer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+.chatContainer {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+}
+.chatBox {
+  border-top: 1px solid #d9d9db;
+  padding: 2em;
+}

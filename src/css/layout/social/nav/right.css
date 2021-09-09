@@ -1,0 +1,14 @@
+.sidebarContainer{
+  min-width: 335px !important;
+}
+.sidebar {
+  border-left: 1px solid var(--nav-border-secondary);
+  border-right-width: 0 !important;
+}
+.container {
+  height: 100%;
+  background: #ffffff;
+}
+.container:hover {
+  overflow: auto;
+}

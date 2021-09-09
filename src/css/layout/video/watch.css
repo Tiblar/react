@@ -1,0 +1,31 @@
+@media (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 1100px) and (min-width: 801px) {
+    .recommendations {
+        margin-left: 0!important;
+    }
+}
+@media (max-width: 450px) {
+    .recommendations {
+        width: unset!important;
+    }
+}
+@media (min-width: 800px) {
+    .recommendations {
+        width: 450px;
+        margin-left: 1rem;
+    }
+}
+.container {
+    display: flex;
+}
+.video {
+    max-width: 900px;
+    flex: 1;
+}
+.recommendations {
+    --video-items-per-row: 1!important;
+}

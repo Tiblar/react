@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-grow: 1;
+  border: 1px solid var(--border-primary);
+  background: var(--background-primary);
+  border-radius: 0.35em;
+  position: relative;
+}
+.container.error {
+  background: var(--interaction-liked) !important;
+  border-color: var(--interaction-liked-border-hover) !important;
+}
+.errorMessage > small {
+  color: #f34343;
+}
+.textContainer {
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+}
+.textInput {
+  display: flex;
+  flex-grow: 1;
+  color: var(--text-normal);
+  border-width: 0;
+  outline: none !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: transparent;
+  resize: none;
+  min-height: 22px !important;
+  padding: 0;
+}
+.buttonOption {
+  display: flex;
+  margin: 5px;
+  height: 32px;
+  padding: 0 0.65em;
+}
+.buttonOption svg > path {
+  fill: var(--text-normal);
+}
+.uploadContainer {
+  position: absolute;
+  border-radius: 0.25em;
+  top: calc(-100px - 1em);
+  box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.15);
+  padding: 0.5em;
+  background: white;
+  border: 1px solid #d9d9db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emojiContainer {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 5px);
+  margin-bottom: 3rem;
+}
+:global(.emoji-mart .emoji-mart-emoji) {
+  outline: none;
+}
+:global(.emoji-mart .emoji-mart-emoji:hover), :global(.emoji-mart .emoji-mart-emoji) span:hover {
+  cursor: pointer;
+}
+:global(.emoji-mart-anchor:hover) {
+  cursor: pointer;
+}
+:global(.emoji-mart-skin) {
+  outline: none;
+}

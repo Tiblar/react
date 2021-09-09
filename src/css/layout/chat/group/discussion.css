@@ -1,0 +1,153 @@
+.discussionOptions {
+    margin: 1em;
+    padding: 1em 0;
+    border-bottom: 1px solid #e7e7e9;
+    display: flex;
+}
+.discussionTab {
+    display: flex;
+    color: #444444;
+    background: #f6f6f6;
+    padding: 0.25em .8em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    align-items: center;
+}
+.discussionTab svg{
+    margin-left: 0.35em;
+}
+.discussionTab.active {
+    color: #0080ff;
+    background: #d8e8ff;
+}
+.discussionTab:not(:first-child) {
+    margin-left: 0.35em;
+}
+.discussionPost {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #e7e7e9;
+    border-radius: 0.35em;
+}
+.discussionPost a {
+    color: #272629;
+}
+.discussionPost a:hover {
+    color: #272629;
+    text-decoration: underline;
+}
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem .1rem;
+    border: 1px solid #e7e7e9;
+    font-size: 14px;
+    width: 50px;
+    border-radius: 0.35em;
+    margin: 0 0.35em;
+}
+.scorePositive {
+    color: #00b172;
+}
+.scoreNegative {
+    color: #eb4949;
+}
+.voteButton {
+    padding: 0.15rem .8rem;
+    color: #41454b;
+    fill: #41454b;
+}
+.voteButton.active {
+    border: 1px solid #c2c4ca;
+}
+.extraButton {
+    padding: 0.15rem .25rem;
+    font-size: 14px;
+    background: transparent;
+    color: #444444;
+    border-width: 0;
+    fill: #444444;
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+}
+.extraButton:hover {
+    border-bottom: 1px solid #626262;
+    transition: border-bottom-color .15s;
+    box-shadow: none;
+}
+.dropdownButton {
+    margin-left: 0.5em;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    padding: 0.15rem .25rem;
+    fill: #444444;
+}
+.title {
+    padding-bottom: 0.25em;
+    color: #272629;
+    font-size: 18px;
+}
+.footerInfo {
+    color: #272629;
+    font-size: 11px;
+    padding-bottom: 0.75em;
+}
+.footerActions{
+    display: flex;
+    color: #272629;
+    font-size: 13px;
+    padding-bottom: 0.35em;
+}
+.footerActions a:hover {
+    text-decoration: none !important;
+}
+.discussionComments {
+    margin: 0.5em 0;
+    border-top: 1px solid #e7e7e9;
+}
+.discussionComment {
+    display: flex;
+    flex-direction: column;
+    color: #444444;
+    margin: 1em 0;
+    user-select: text;
+}
+.discussionCommentHeader {
+    display: flex;
+    margin-bottom: 0.4em;
+    align-items: center;
+}
+.discussionCommentHeader button {
+    padding: 0 .7em;
+}
+.discussionCommentHeader .score {
+    padding: 0;
+    border: 0;
+    width: unset;
+}
+.discussionCommentUsername {
+    margin-left: 0.5em;
+}
+.discussionCommentTimestamp {
+    margin-left: 0.5em;
+    font-size: 10px;
+    color: #a1a1a2;
+}
+.commentVote {
+    display: flex;
+}
+.commentLevel {
+    padding-left: 1.25em;
+    border-left: 1px dashed #e7e7e9;
+    margin-bottom: 0;
+}
+.newCommentArea {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e7e7e9;
+    margin: 1em 0;
+}
+.newCommentArea textarea{
+    width: 50%;
+}

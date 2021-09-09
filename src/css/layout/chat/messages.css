@@ -1,0 +1,104 @@
+.container {
+  position: relative;
+  display: flex;
+  height: auto;
+  flex: 1 1 auto;
+}
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  padding: 1em 2em 2em;
+}
+.start {
+  display: flex;
+  flex: 1 1 auto;
+  border-bottom: 2px solid #3f3d56;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .start svg {
+    height: 400px !important;
+  }
+}
+.start svg {
+  height: 650px;
+  max-width: 100%;
+}
+.group {
+  border-top: 1px solid #ececec;
+  padding-top: 1em;
+  margin-top: 1.5em;
+}
+.profilePicture {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.inner {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+.content {
+  margin-left: 75px;
+}
+.contentUsername {
+  font-family: "Work Sans SemiBold", sans-serif;
+  font-size: 15px;
+}
+.contentTop {
+  display: flex;
+  align-items: center;
+}
+.contentDate {
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  margin-left: 1em;
+}
+.message {
+  user-select: text;
+  margin-top: 0.25em;
+}
+.newMessageAlert {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 4em);
+  background: #f1f1ff;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0.25em;
+  border: 1px solid #3751ff;
+  color: #3751ff;
+  cursor: pointer;
+  overflow: hidden;
+}
+.newMessageAlert p {
+  display: flex;
+  flex-grow: 1;
+  padding: 0.45em 0.65em;
+}
+.newMessageAlert .close {
+  display: flex;
+  align-items: center;
+  padding: 0.45em 0.65em;
+  border-left: 1px solid #3751ff;
+}
+.newMessageAlert .close:hover {
+  background: #ececfa;
+}
+.loading {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+.loading svg {
+  width: 150px;
+}
+.attachmentContent img {
+  border-radius: 0.15em;
+  max-width: 400px;
+  background: #f5f5f7;
+}

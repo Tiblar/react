@@ -1,0 +1,163 @@
+@media screen and (max-width: 1000px) {
+    .profileContainer {
+        width: 100% !important;
+    }
+
+    .container {
+        padding: 0 !important;
+    }
+
+    .header {
+        border: unset !important;
+        border-radius: 0 !important;
+    }
+    .main {
+        margin: 1rem 1.5rem;
+    }
+    .main .info {
+        margin-left: unset !important;
+    }
+}
+
+.containerOuter {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 1000;
+    display: flex;
+}
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--background-primary);
+    width: 550px;
+    margin-left: auto;
+    top: 0;
+    bottom: 0;
+    animation-timing-function: linear;
+    animation: slide-transition 0.2s forwards;
+}
+@keyframes slide-transition {
+    0% {
+        right: -30%;
+    }
+    100% {
+        right: 0;
+    }
+}
+.profileContainer .top {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-primary);
+}
+.close {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.close path {
+    transition: fill 0.15s ease-in-out;
+    fill: #9ea2a7;
+}
+.close:hover path {
+    fill: #828589;
+}
+.profileContainer .top .username {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.profileContainer .top .interactions {
+    margin-left: auto;
+}
+.profileContainer .bottom {
+    position: relative;
+    display: flex;
+    flex: 1 1 ;
+}
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px;
+    overflow: auto;
+}
+.header {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-primary);
+    background: var(--background-primary);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.header .cover {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    background: var(--profile-background);
+    position: relative;
+}
+.cover .profileImage > img, .cover .profileImage > svg {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1.5rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+    border-radius: 0.5rem;
+    width: 100px;
+}
+.main {
+}
+.main .info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-left: calc(3rem + 100px);
+    min-height: 3.5rem;
+}
+.main .info .username {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+.main .info .username label {
+    padding: 0.35rem;
+    border-radius: 0.2rem;
+    background: var(--background-tertiary);
+    font-size: 0.75rem;
+    margin-left: 0.75rem
+}
+.main .info .actions {
+    display: flex;
+    color: var(--text-normal);
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.main .info .biography {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-normal);
+    word-break: break-all;
+}
+.main .info .location {
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-normal);
+    fill: var(--text-normal);
+}
+.main .info .location > svg {
+    margin-right: 0.5rem;
+}

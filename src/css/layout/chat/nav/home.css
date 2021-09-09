@@ -1,0 +1,14 @@
+.logoContainer {
+  margin-top: 32px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5em;
+}
+.logoContainer div {
+  cursor: pointer;
+}
+.logo path {
+  fill: var(--sidebar-logo);
+}

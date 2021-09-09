@@ -1,0 +1,43 @@
+:root {
+    --plyr-color-main: #ffffff;
+    --plyr-audio-controls-background: #eee;
+    --plyr-audio-control-color: #4a5464;
+    --plyr-audio-control-color-hover: #4a5464;
+    --plyr-audio-control-background-hover: #ddd;
+    --plyr-audio-range-track-background: #ddd;
+}
+:global(.plyr--audio){
+    width: 100%;
+    border-radius: 0.35rem;
+}
+:global(.plyr) {
+    font-family: "Open Sans SemiBold", sans-serif;
+}
+:global(.plyr--video .plyr__control):hover, :global(.plyr--video .plyr__control[aria-expanded=true]) {
+    background: transparent !important;
+}
+:global(.plyr__menu__container) {
+    background: rgba(28,28,28,.77);
+    color: #ffffff !important;
+}
+:global(.plyr__menu__container), :global(.plyr__control) span {
+    color: #ffffff !important;
+}
+:global(.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true])::before {
+    background: transparent;
+}
+:global(.plyr__menu__container .plyr__control--back)::after {
+    border-right-color: #ffffff !important;
+}
+:global(.plyr__menu__container .plyr__control--forward)::after {
+    border-left-color: #ffffff !important;
+}
+:global(.plyr__menu__container .plyr__control[role=menuitemradio]) {
+    border-radius: 0.3rem;
+}
+:global(.plyr__menu__container .plyr__control[role=menuitemradio]):hover {
+    background: rgba(200,200,200,.15) !important
+}
+:global(.plyr__progress) input[type=range]:hover {
+    cursor: pointer !important;
+}

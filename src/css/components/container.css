@@ -1,0 +1,35 @@
+@media screen and (min-width: 1300px) {
+    .container {
+        width: 1200px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 1152px;
+    }
+}
+@media screen and (max-width: 1216px) {
+    .container {
+        width: 1000px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 960px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+}
+.container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+}

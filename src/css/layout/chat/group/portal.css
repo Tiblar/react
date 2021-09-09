@@ -1,0 +1,25 @@
+.portal {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b3b7c6;
+    border-radius: 0.75em;
+    background: #ffffff;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.icon path {
+    fill: #b4b9cc;
+}
+.portal.active {
+    border: 2px solid #b3b7c6;
+    width: 46px;
+    height: 46px;
+}
+.portal:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 5px;
+}

@@ -1,0 +1,54 @@
+.actionsMenu {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    width: 200px;
+    padding: 0.5rem;
+    background: var(--background-primary);
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-primary);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04);
+    animation-timing-function: linear;
+    animation: actions-transition 0.2s forwards;
+}
+@keyframes actions-transition {
+    0% {
+        top: 18px;
+        opacity: 0.5;
+    }
+    100% {
+        top: 15px;
+        opacity: 1;
+    }
+}
+.actionsMenu .title {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e7e7e9;
+    cursor: default;
+}
+.actionsMenu .title > svg {
+    margin-right: 0.5rem;
+}
+.actionsMenu .title svg > path {
+    fill: var(--text-normal) !important;
+}
+.actionsMenu .option {
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    color: var(--text-normal);
+}
+.actionsMenu .option:hover {
+    cursor: pointer;
+    background: var(--background-tertiary);
+}
+.actionsMenu .option > svg {
+    margin-right: 0.5rem;
+}
+.actionsMenu .option svg > path {
+    fill: var(--text-normal) !important;
+}

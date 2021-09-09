@@ -1,0 +1,9 @@
+.sidebarContainer {
+    width: 120px !important;
+}
+.sidebarItem {
+    justify-content: center;
+}
+.sidebarItem label {
+    margin: auto !important;
+}

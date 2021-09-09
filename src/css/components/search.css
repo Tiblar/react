@@ -1,0 +1,124 @@
+@media screen and (max-width: 1000px) {
+  .search {
+    width: 100% !important;
+  }
+  .searchComplete {
+    width: 100% !important;
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: slide-transition-mobile 0.3s forwards !important;
+  }
+}
+
+.container {
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1rem;
+  display: flex;
+  flex: 1;
+}
+.search {
+  display: flex;
+  align-items: center;
+  width: 555px;
+  background: var(--background-grey);
+  height: 35px;
+  border-radius: 0.35em;
+  transition: background 0.1s linear;
+}
+.search230 {
+  width: 230px;
+}
+.search:focus-within {
+  background: var(--background-tertiary);
+}
+.searchIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75em;
+}
+.searchIcon path {
+  fill: #b3b7c6;
+}
+.input {
+  height: 28px;
+  width: 100%;
+  background: transparent;
+  border-width: 0;
+  outline: none !important;
+  font-size: 16px;
+  margin-left: 0.55em;
+  font-family: "Work Sans SemiBold", sans-serif;
+  color: var(--text-normal);
+}
+.input::placeholder {
+  color: var(--text-light);
+  font-size: 14px !important;
+}
+.clearButton {
+  border: 0;
+  background: none;
+}
+.clearButton:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+.searchComplete {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 555px;
+  z-index: 1;
+  border-radius: 0.25rem;
+  background: var(--background-primary);
+  border: 1px solid var(--border-secondary);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
+  animation: slide-transition 0.3s forwards;
+}
+@keyframes slide-transition {
+  0% {
+    top: calc(100%);
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    top: calc(100% + 10px);
+    transform: scale(1);
+  }
+}
+@keyframes slide-transition-mobile {
+  0% {
+    top: 15%;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    top: 60px;
+    transform: scale(1);
+  }
+}
+
+.section {
+
+}
+.title {
+  background: var(--background-tertiary);
+  padding: 0.5rem;
+}
+.result {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.result:hover {
+  background: var(--background-secondary);
+  cursor: pointer;
+}
+.result img {
+  height: 24px;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}

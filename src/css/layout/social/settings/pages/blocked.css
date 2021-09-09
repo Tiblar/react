@@ -1,0 +1,24 @@
+.connected {
+}
+.blocked {
+  display: flex;
+  color: #878787;
+  font-family: "Work Sans", sans-serif;
+}
+.blocked svg {
+  margin-right: 0.25em;
+}
+.blocked path {
+  fill: #878787;
+}
+.unblocked {
+  display: flex;
+  color: #0da26d;
+  font-family: "Work Sans", sans-serif;
+}
+.unblocked svg {
+  margin-right: 0.25em;
+}
+.unblocked path {
+  fill: #0da26d;
+}

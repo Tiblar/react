@@ -1,0 +1,19 @@
+.request {
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.requestInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+}
+.requestInfo p {
+    font-family: "Work Sans SemiBold", sans-serif;
+}
+.requestOptions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}

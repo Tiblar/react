@@ -1,0 +1,39 @@
+.root {
+  max-width: calc(var(--maxWidth) * 1px);
+}
+
+.wrapper {
+  border-radius: 0.15em;
+  position: relative;
+  height: 0;
+  padding-top: calc(var(--height) / var(--width) * 100%);
+  background: #fafbfc
+    linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 20%,
+      #f6f7f8 40%,
+      #f6f7f8 100%
+    )
+    no-repeat;
+  background-size: 800px 1004px;
+  animation: placeHolderShimmer 1s linear infinite forwards;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
