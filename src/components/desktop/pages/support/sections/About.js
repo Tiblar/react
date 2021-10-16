@@ -8,13 +8,13 @@ import cardStyles from "../../../../../css/components/card.css";
 import formStyles from "../../../../../css/form.css";
 import layoutStyles from "../../../../../css/layout.css";
 
-import TiblarStaff from "../../../../../assets/about/tiblar_staff.jpg";
+import SneedStaff from "../../../../../assets/about/sneed_staff.jpg";
 
 import Container from "../../../layout/parts/support/Container";
 import {MAX_MOBILE_WIDTH, SUPPORT_URL} from "../../../../../util/constants";
 import useWindowDimensions from "../../../../../util/hooks/useWindowDimensions";
 
-function About(props) {
+function About() {
     const {width} = useWindowDimensions();
 
     return (
@@ -44,7 +44,7 @@ function About(props) {
                                     MAX_MOBILE_WIDTH < width &&
                                     <div className={layoutStyles.flex}>
                                         <div style={{maxWidth: "400px"}}>
-                                            <div style={{width: "400px", height: "400px", background: "url(" + TiblarStaff + ")", backgroundSize: "cover"}} />
+                                            <div style={{width: "400px", height: "400px", background: "url(" + SneedStaff + ")", backgroundSize: "cover"}} />
                                             <div className={formStyles.alert + ' ' + layoutStyles.mT1}>
                                                 Formerly Chuck's staff members
                                             </div>

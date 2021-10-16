@@ -159,10 +159,18 @@ function FollowBlocked(props) {
                 <BlockedGraphic width="100%" />
                 <hr className={layoutStyles.mT1 + ' ' + layoutStyles.mB1} />
                 {
-                    manager.error &&
+                    !props.auth.isAuthenticated && manager.error &&
                     <div className={formStyles.alert}>
                         <p>
-                            There was an error. Please refresh, if it continues, <Link to={SUPPORT_URL}>contact support</Link>.
+                            You need to follow to view this user. Please <Link to="/login">login</Link> to do so.
+                        </p>
+                    </div>
+                }
+                {
+                    props.auth.isAuthenticated && manager.error &&
+                    <div className={formStyles.alert}>
+                        <p>
+                            There was an error. Please refresh to try again. Contact <Link href="/support">support</Link> if this continues.
                         </p>
                     </div>
                 }
@@ -172,7 +180,7 @@ function FollowBlocked(props) {
                         You need to follow to view this user.
                         {
                             !props.auth.isAuthenticated &&
-                            <Link to={`/login`} className={formStyles.button + ' ' + formStyles.buttonPrimary + ' ' + layoutStyles.mL}>
+                            <Link to="/login" className={formStyles.button + ' ' + formStyles.buttonPrimary + ' ' + layoutStyles.mL}>
                                 Request
                             </Link>
                         }
