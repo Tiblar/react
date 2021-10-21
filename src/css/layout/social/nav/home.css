@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
 }
+.logoContainer svg {
+  border-radius: 0.35rem;
+}
 .logoContainer div {
   cursor: pointer;
-}
-.logo path {
-  fill: var(--sidebar-logo);
 }

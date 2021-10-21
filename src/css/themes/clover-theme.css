@@ -66,10 +66,6 @@
     --alert-blue-background: #efefff;
 }
 
-.logo path {
-    fill: #ad61ac;
-}
-
 .background {
     background: url(../../assets/themes/backgrounds/clover.jpg) fixed repeat;
 }

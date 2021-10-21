@@ -1,8 +1,7 @@
-// @flow
-
 export const WEB_URL = "https://formerlychucks.net";
 export const API_URL = "https://formerlychucks.net/api/v2";
 export const SUPPORT_URL = "https://formerlychucks.net/support";
+export const STATUS_URL = "https://formerlychucks.net/support";
 export const SUCCESSFUL_BOOST_URL_PAYPAL = "https://formerlychucks.net/support/boost/success/paypal"
 export const SUCCESSFUL_BOOST_URL_CREDIT_CARD = "https://formerlychucks.net/support/boost/success/cc"
 export const SOCKET_GATEWAY = "ws://localhost:3031";
@@ -68,6 +67,12 @@ export const POST_VIDEO_MAX_SIZE = 100;
 export const POST_AUDIO_MAX_SIZE = 100;
 export const POST_PDF_MAX_SIZE = 100;
 export const POST_FILE_MAX_SIZE = 100;
+
+export const POST_BOOST_IMAGE_MAX_SIZE = 80;
+export const POST_BOOST_VIDEO_MAX_SIZE = 100;
+export const POST_BOOST_AUDIO_MAX_SIZE = 100;
+export const POST_BOOST_PDF_MAX_SIZE = 100;
+export const POST_BOOST_FILE_MAX_SIZE = 100;
 
 export const MAX_IMAGE_FILES = 10;
 export const MAX_DEFAULT_FILES = 1;

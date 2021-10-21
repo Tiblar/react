@@ -25,6 +25,7 @@ function SupportHome(props) {
                             <li><Link to="/support/pages/tos">Terms of Service</Link></li>
                             <li><Link to="/support/pages/financials">Billing/financials</Link></li>
                             <li><Link to="/support/pages/about">Mission statement and About Formerly Chuck's</Link></li>
+                            <li><a href="https://one_free_man.artstation.com/">Source of login page art work</a></li>
                         </ul>
                     </div>
                 </div>

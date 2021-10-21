@@ -10,6 +10,9 @@
   .auth {
     padding-right: unset !important;
   }
+  .source {
+    display: none;
+  }
 }
 @media (max-width: 500px) {
   .auth {
@@ -33,7 +36,7 @@
 }
 
 .background {
-  background: url("../../assets/graphics/auth/background.png") no-repeat center
+  background: url("../../assets/graphics/auth/sneed.jpg") no-repeat center
     center fixed;
   background-size: cover;
   width: 100%;
@@ -45,8 +48,8 @@
 .logoContainer {
   margin-bottom: 1.5rem;
 }
-.logo path {
-  fill: #898989;
+.logoContainer svg {
+  border-radius: 0.35rem;
 }
 .cover {
   width: 100%;
@@ -320,4 +323,9 @@
   100% {
     transform: translate(0px, 0px);
   }
+}
+.source {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
 }

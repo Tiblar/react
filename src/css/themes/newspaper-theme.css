@@ -130,10 +130,6 @@
     --alert-blue-background: #484855;
 }
 
-.logo path {
-    fill: var(--sidebar-logo);
-}
-
 .username {
     font-family: "Fraktur", serif;
 }
