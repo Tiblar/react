@@ -49,6 +49,8 @@ function CryptoButton(props) {
                         payment_method={manager.paymentMethod} />
             }
             {
+                /*
+             {
                 (manager.active && !manager.paymentMethod) &&
                 <div>
                     <div className={cardSelectorStyles.cardSelector}
@@ -73,6 +75,8 @@ function CryptoButton(props) {
                     <CryptoIcon width={30} height={20} />
                     <p>CryptoCurrency</p>
                 </div>
+            }
+                 */
             }
         </div>
     );
