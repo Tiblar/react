@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  js:
+    container_name: js
+    stdin_open: true
+    build:
+      context: ./docker/js
+    networks:
+      - fc
+    volumes:
+      - ./:/var/www/frontend
+    ports:
+      - '8888:8888'
+  nginx-frontend:
+    container_name: nginx-frontend
+    image: nginx:stable-alpine
+    networks:
+      - fc
+    ports:
+      - '8080:80'
+    volumes:
+      - ./:/var/www/frontend
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - js
+
+networks:
+  fc:
+    name: formerlychucks
+    ipam:
+      config:
+        - subnet: 172.16.57.0/24
