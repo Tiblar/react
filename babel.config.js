@@ -1,11 +1,7 @@
 module.exports = {
     "sourceMaps": true,
     "presets": [
-        ["@babel/preset-env", {
-            "targets": [
-                "last 2 Chrome versions", "last 2 Firefox versions", "last 2 Safari versions"
-            ],
-        }],
+        ["@babel/preset-env"],
         "@babel/preset-flow",
         "@babel/preset-react",
     ],
