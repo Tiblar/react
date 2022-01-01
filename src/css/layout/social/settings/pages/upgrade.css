@@ -26,3 +26,10 @@
 .tier span {
   margin-left: 0.65em;
 }
+.cryptoList {
+  column-count: 2;
+}
+.cryptoList .item {
+  max-width: 250px;
+  margin-bottom: 0.25rem;
+}

@@ -12,7 +12,7 @@ import formStyles from "../../../../../../../css/form.css";
 import LoadingGraphic from "../../../../../../../assets/loading/dots.svg";
 import CircleLoading from "../../../../../../../assets/loading/circle-loading.svg";
 
-import Invoice from "../../../settings/financials/Invoice";
+import InvoiceOld from "../../../settings/financials/Invoice";
 
 import {
     API_URL,
@@ -67,6 +67,24 @@ function Crypto(props) {
                     loading: false,
                     error: true
                 }));
+
+                const Notification = () => (
+                    <div>
+                        There was an error!
+                    </div>
+                );
+
+                toast.error(<Notification />, {
+                    position: "bottom-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+
+                props.setCrypto(null);
             });
     }, []);
 
@@ -127,12 +145,12 @@ function Crypto(props) {
     return (
         <div>
             {
-                !manager.order &&
+                !manager.error && !manager.order &&
                 <LoadingGraphic width={45} height={45} />
             }
             {
                 manager.order &&
-                <div>
+                <>
                     <div>
                         <button className={formStyles.button + ' ' + formStyles.buttonSmall + ' ' + formStyles.buttonIcon + ' ' + layoutStyles.mL} onClick={handleRefresh}>
                             {
@@ -145,9 +163,9 @@ function Crypto(props) {
                         </button>
                     </div>
                     <div>
-                        {manager.order.invoices.map(invoice => <Invoice invoice={invoice} />)}
+                        {manager.order.invoices.map(invoice => <InvoiceOld invoice={invoice} />)}
                     </div>
-                </div>
+                </>
             }
         </div>
     );
@@ -159,6 +177,7 @@ const mapStateToProps = (state) => {
 };
 
 Crypto.propTypes = {
+    setCrypto: PropTypes.func,
     payment_method: PropTypes.string,
     frequency: PropTypes.string,
     product: PropTypes.object,

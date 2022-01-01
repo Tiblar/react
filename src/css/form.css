@@ -62,6 +62,7 @@
   color: #0da26d !important;
 }
 .badge {
+  text-align: center;
   padding: 0.1rem 0.5rem;
   font-size: 0.85rem;
   border-radius: 0.35rem;
@@ -71,6 +72,14 @@
 .badge.success {
   background: rgba(0, 177, 114, 0.14);;
   color: #00b172;
+}
+.badge.danger {
+  background-color: var(--interaction-liked);
+  color: #f34343;
+ }
+.badge.warning {
+  background: rgba(177, 94, 0, 0.14);;
+  color: #ec6300;
 }
 .buttonGroup {
   display: flex;
@@ -116,7 +125,6 @@
   touch-action: manipulation;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  font-size: 16px;
 }
 .button:disabled {
   cursor: auto !important;

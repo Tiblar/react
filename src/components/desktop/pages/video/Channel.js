@@ -91,7 +91,6 @@ function Channel(props) {
     };
 
     function fetchPosts() {
-        console.log('fetch posts')
         const config = {
             headers: {
                 "Content-Type": "multipart/form-data"

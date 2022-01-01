@@ -6,14 +6,12 @@ import axios from "axios";
 import {toast} from "react-toastify";
 import {isMobile} from "is-mobile";
 
-import cardStyles from "../../../../../../css/layout/social/settings/card.css";
+import cardStyles from "../../../../../../css/components/card.css";
 import layoutStyles from "../../../../../../css/layout.css";
 import formStyles from "../../../../../../css/form.css";
-import financialStyles from "../../../../../../css/layout/social/settings/pages/financials.css";
 import modalStyles from "../../../../../../css/components/modal.css";
 
-import OrderRow from "./OrderRow";
-import Invoice from "./Invoice";
+import InvoiceOld from "./Invoice";
 
 import CircleLoading from "../../../../../../assets/loading/circle-loading.svg";
 
@@ -21,10 +19,10 @@ import {formatFullDate} from "../../../../../../util/date";
 import {price} from "../../../../../../util/formatNumber";
 import {
     API_URL, INVOICE_STATUS_PENDING,
-    PAYMENT_METHOD_BITCOIN,
+    PAYMENT_METHOD_CRYPTO_LIST,
     PAYMENT_METHOD_CREDIT_CARD_STRIPE,
-    PAYMENT_METHOD_MONERO,
-    PAYMENT_METHOD_PAYPAL, PAYPAL_CANCEL_URL
+    PAYMENT_METHOD_PAYPAL,
+    PAYPAL_CANCEL_URL
 } from "../../../../../../util/constants";
 import outsideClick from "../../../../../../util/components/outsideClick";
 
@@ -218,7 +216,7 @@ function OrderModal(props) {
     }
 
     let isCrypto = order.invoices.some(invoice => {
-        return [PAYMENT_METHOD_BITCOIN, PAYMENT_METHOD_MONERO].includes(invoice.payment_method.type)
+        return PAYMENT_METHOD_CRYPTO_LIST.includes(invoice.payment_method.type)
     });
 
     let hasActive = order.invoices.some(invoice => {
@@ -237,33 +235,28 @@ function OrderModal(props) {
                                 </div>
                             </div>
                             <div className={modalStyles.body}>
-                                <div className={financialStyles.table}>
-                                    <OrderRow order={order} />
-                                </div>
-                                <div className={layoutStyles.mT1}>
-                                    <div className={layoutStyles.flex}>
-                                        <p>{order.product.title}</p>
-                                        {
-                                            order.recurring && order.active &&
-                                            <div className={formStyles.badge + ' ' + layoutStyles.mL1}>
-                                                Recurring + Active
-                                            </div>
-                                        }
-                                    </div>
-                                    <p>
-                                        <small>{order.product.description}</small>
-                                    </p>
+                                <div className={layoutStyles.flex}>
+                                    <p>{order.product.title}</p>
                                     {
-                                        order.expire_timestamp && order.active &&
-                                        <p>
-                                            <small>
-                                                <b>Next Payment:</b>&nbsp;{formatFullDate(order.expire_timestamp)}
-                                            </small>
-                                        </p>
+                                        order.recurring && order.active &&
+                                        <div className={formStyles.badge + ' ' + layoutStyles.mL1}>
+                                            Recurring + Active
+                                        </div>
                                     }
                                 </div>
+                                <p>
+                                    <small>{order.product.description}</small>
+                                </p>
+                                {
+                                    order.expire_timestamp && order.active &&
+                                    <p>
+                                        <small>
+                                            <b>Next Payment:</b>&nbsp;{formatFullDate(order.expire_timestamp)}
+                                        </small>
+                                    </p>
+                                }
                                 <div className={cardStyles.card + ' ' + layoutStyles.mT1}>
-                                    <div className={cardStyles.cardTitle}>
+                                    <div className={cardStyles.cardHeader}>
                                         <h4>Order Summary</h4>
                                     </div>
                                     <div className={cardStyles.cardBody}>
@@ -281,33 +274,50 @@ function OrderModal(props) {
                                     </div>
                                 </div>
                                 <div className={layoutStyles.mT1}>
-                                    <h4>Invoices</h4>
-                                    {
-                                        (isCrypto) &&
-                                        <div className={layoutStyles.flex + ' ' + layoutStyles.mT1}>
-                                            {
-                                                !hasActive &&
-                                                <button className={formStyles.button + ' ' + formStyles.buttonSmall + ' ' + formStyles.buttonIcon} onClick={handleGenerateInvoice}>
-                                                    {
-                                                        !manager.generatingInvoice && "Generate Invoice"
-                                                    }
-                                                    {
-                                                        manager.generatingInvoice &&
-                                                        <CircleLoading width={16} />
-                                                    }
-                                                </button>
-                                            }
-                                            <button className={formStyles.button + ' ' + formStyles.buttonSmall + ' ' + formStyles.buttonIcon + ' ' + layoutStyles.mL} onClick={handleRefresh}>
+                                    <div className={layoutStyles.flex}>
+                                        <h4>Invoices</h4>
+                                        {
+                                            isCrypto &&
+                                            <div className={layoutStyles.mL}>
                                                 {
-                                                    !manager.refreshing && "Refresh"
+                                                    !hasActive &&
+                                                    <button
+                                                    disabled={manager.generatingInvoice}
+                                                    className={
+                                                        formStyles.button + ' ' + formStyles.buttonSmall + ' ' +
+                                                        formStyles.buttonIcon
+                                                    }
+                                                    onClick={handleGenerateInvoice}>
+                                                        {
+                                                            !manager.generatingInvoice && "Generate Invoice"
+                                                        }
+                                                        {
+                                                            manager.generatingInvoice &&
+                                                            <CircleLoading width={21} />
+                                                        }
+                                                    </button>
                                                 }
                                                 {
-                                                    manager.refreshing &&
-                                                    <CircleLoading width={16} />
+                                                    hasActive &&
+                                                    <button
+                                                    disabled={manager.refreshing}
+                                                    className={
+                                                        formStyles.button + ' ' + formStyles.buttonSmall + ' ' +
+                                                        formStyles.buttonIcon + ' ' + layoutStyles.mL
+                                                    }
+                                                    onClick={handleRefresh}>
+                                                        {
+                                                            !manager.refreshing && "Refresh"
+                                                        }
+                                                        {
+                                                            manager.refreshing &&
+                                                            <CircleLoading width={21} />
+                                                        }
+                                                    </button>
                                                 }
-                                            </button>
-                                        </div>
-                                    }
+                                            </div>
+                                        }
+                                    </div>
                                     {
                                         order.invoices.length === 0 &&
                                         <div className={formStyles.alert + ' ' + layoutStyles.mT1}>
@@ -316,7 +326,7 @@ function OrderModal(props) {
                                     }
                                     {
                                         order.invoices.slice(0, (manager.showAllInvoices ? order.invoices.length : 3)).map(invoice => (
-                                            <Invoice key={invoice.id} invoice={invoice} />
+                                            <InvoiceOld key={invoice.id} invoice={invoice} />
                                         ))
                                     }
                                     {
@@ -406,7 +416,7 @@ function OrderModal(props) {
                                                         </div>
                                                     }
                                                     {
-                                                        [PAYMENT_METHOD_BITCOIN, PAYMENT_METHOD_MONERO].includes(invoice.payment_method.type) &&
+                                                        PAYMENT_METHOD_CRYPTO_LIST.includes(invoice.payment_method.type) &&
                                                         <div className={layoutStyles.flex + ' ' + layoutStyles.flexColumn + ' ' + layoutStyles.flexGrow}>
                                                             <div className={layoutStyles.flex}>
                                                                 <div>
