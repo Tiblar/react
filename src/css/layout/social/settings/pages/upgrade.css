@@ -33,3 +33,12 @@
   max-width: 250px;
   margin-bottom: 0.25rem;
 }
+@media screen and (max-width: 800px) {
+  .cryptoList {
+    column-count: unset;
+  }
+
+  .cryptoList .item {
+    max-width: unset;
+  }
+}

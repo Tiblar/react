@@ -99,9 +99,7 @@ function CryptoButton(props) {
             }
             {
                 !manager.active &&
-                <div className={cardSelectorStyles.cardSelector}
-                     onClick={handleClick}
-                     style={{maxWidth: "250px", marginTop: "0.25rem"}}>
+                <div className={cardSelectorStyles.cardSelector + ' ' + upgradeStyles.item} onClick={handleClick}>
                     <CryptoIcon width={30} height={20} />
                     <p>Cryptocurrency</p>
                 </div>
