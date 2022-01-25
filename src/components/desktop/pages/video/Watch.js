@@ -43,7 +43,6 @@ function Watch(props) {
                 "Content-Type": "multipart/form-data"
             }
         };
-
         axios.get(API_URL + '/post/' + props.match.params.id, config)
             .then(function (res) {
                 if(res.data.data && res.data.data.posts && res.data.data.posts.length > 0){
@@ -57,7 +56,7 @@ function Watch(props) {
 
                     setManager(manager => ({
                         ...manager,
-                        video: res.data.data.posts[0],
+                        video: post,
                     }))
                 }
             })
