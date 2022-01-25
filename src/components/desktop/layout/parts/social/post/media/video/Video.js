@@ -10,6 +10,23 @@ import PlyrComponent from "../../../../../../../../util/components/PlyrComponent
 
 const Video = (props) => {
 
+let sources = [{ src: props.file.file.url, size: props.file.available_transcoding.h }]
+if (props.file.available_transcoding) {
+  console.log('detected additional video sources', props.file)
+
+  // keep transcode URLs relative to file.url
+  let base = 'http://192.168.253.60:9000/seed/'
+  if (!window.location.href.match(/192\.168/)) {
+    const parts = props.file.file.url.split('/')
+    parts.pop()
+    base = parts.join('/') + '/'
+  }
+
+  // fix up formats
+  const transCodes = props.file.available_transcoding.alts.map(t => { return { src: base + t.path, size: t.res } })
+  sources = [...transCodes, { src: props.file.file.url, size: props.file.available_transcoding.h }]
+}
+
     return (
         <div className={postStyles.video}>
             {
@@ -19,11 +36,7 @@ const Video = (props) => {
                 ) &&
                 <PlyrComponent autoplay={props.autoplay} sources={{
                     type: 'video',
-                    sources: [
-                        {
-                            src: props.file.file.url,
-                        },
-                    ],
+                    sources: sources,
                 }}/>
             }
             {
