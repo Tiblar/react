@@ -92,7 +92,7 @@ function Body(props) {
                 <div className={postStyles.tagsWrapper}>
                     {post.tags.map((tag) => (
                         <Link key={tag.id}
-                              to={props.profile ? `/${props.profileUser.info.username}?q=${tag.title}` : `/search/${tag.title}`}
+                              to={props.profile ? `/${props.profileUser.info.username}?q=${tag.title}` : `/search/${encodeURIComponent(tag.title)}`}
                               className={postStyles.tag}>
                             <label>#{tag.title}</label>
                         </Link>
