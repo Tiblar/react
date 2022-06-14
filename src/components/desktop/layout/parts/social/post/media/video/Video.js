@@ -9,9 +9,18 @@ import layoutStyles from "../../../../../../../../css/layout.css";
 import PlyrComponent from "../../../../../../../../util/components/PlyrComponent";
 
 const Video = (props) => {
-
-let sources = [{ src: props.file.file.url, size: props.file.available_transcoding.h }]
+//
+let sources
 if (props.file.available_transcoding) {
+  sources = [{ src: props.file.file.url, size: props.file.available_transcoding.h }]
+} else
+if (props.file.file.height) {
+  sources = [{ src: props.file.file.url, size: props.file.file.height }]
+} else {
+  console.log('no height in props:', props)
+  sources = [{ src: props.file.file.url }]
+}
+if (props.file && props.file.available_transcoding) {
   console.log('detected additional video sources', props.file)
 
   // keep transcode URLs relative to file.url
