@@ -12,7 +12,13 @@ const Video = (props) => {
 //
 let sources
 if (props.file.available_transcoding) {
+  console.log('oldtc')
   sources = [{ src: props.file.file.url, size: props.file.available_transcoding.h }]
+} else
+if (props.file.available_transcodes) {
+  // for socials
+  sources = [{ src: props.file.file.url, size: props.file.available_transcodes.h }]
+  //console.log('in socials:', sources, props.file)
 } else
 if (props.file.file.height) {
   sources = [{ src: props.file.file.url, size: props.file.file.height }]
@@ -20,7 +26,7 @@ if (props.file.file.height) {
   console.log('no height in props:', props)
   sources = [{ src: props.file.file.url }]
 }
-if (props.file && props.file.available_transcoding) {
+if (props.file && (props.file.available_transcoding || props.file.available_transcodes)) {
   console.log('detected additional video sources', props.file)
 
   // keep transcode URLs relative to file.url
@@ -32,8 +38,15 @@ if (props.file && props.file.available_transcoding) {
   }
 
   // fix up formats
-  const transCodes = props.file.available_transcoding.alts.map(t => { return { src: base + t.path, size: t.res } })
-  sources = [...transCodes, { src: props.file.file.url, size: props.file.available_transcoding.h }]
+  if (props.file.available_transcoding) {
+    console.log('oldtc')
+    const transCodes = props.file.available_transcoding.alts.map(t => { return { src: base + t.path, size: t.res } })
+    sources = [...transCodes, { src: props.file.file.url, size: props.file.available_transcoding.h }]
+  }
+  if (props.file.available_transcodes) {
+    const transCodes = props.file.available_transcodes.alts.map(t => { return { src: base + t.path, size: t.res } })
+    sources = [...transCodes, { src: props.file.file.url, size: props.file.available_transcodes.h }]
+  }
 }
 
     return (
