@@ -99,7 +99,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'world-chat/webapp/matrix', to: 'matrix' },
+        { from: 'world-chat/webapp', to: 'matrix' },
         { from: 'public/version', to: "" },
       ]
     }),
@@ -109,4 +109,7 @@ module.exports = {
   },
   target: "web",
   devtool: 'source-map',
+  // https://stackoverflow.com/a/70437745
+  //mode: 'development'
+  mode: 'production'
 };
