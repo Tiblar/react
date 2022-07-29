@@ -137,8 +137,6 @@ function Summary(props) {
                     <b className={layoutStyles.mB1}>Select payment method:</b>
                 }
                 {
-                /*
-                 {
                     (!manager.paymentMethod || manager.paymentMethod === PAYMENT_METHOD_CREDIT_CARD_STRIPE) &&
                     <StripeButton
                         setPaymentMethod={setPaymentMethod}
@@ -147,14 +145,14 @@ function Summary(props) {
                         frequency={manager.frequency} />
                 }
                 {
+                /*
+                {
                     (!manager.paymentMethod || manager.paymentMethod === PAYMENT_METHOD_PAYPAL) &&
                     <PayPalButton
                         setPaymentMethod={setPaymentMethod}
                         product={props.product}
                         attributes={props.attributes}
                         frequency={manager.frequency} />
-                }
-                */
                 }
                 {
                     (!manager.paymentMethod || manager.paymentMethod === PAYMENT_METHOD_CRYPTOCURRENCY) &&
@@ -163,6 +161,8 @@ function Summary(props) {
                         product={props.product}
                         attributes={props.attributes}
                         frequency={manager.frequency} />
+                }
+                */
                 }
             </div>
         </div>
