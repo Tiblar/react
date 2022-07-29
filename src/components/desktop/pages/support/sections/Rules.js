@@ -32,11 +32,17 @@ function Rules(props) {
                                  along with real content.</li>
                              <li>Do not upload copyright data without permission.</li>
                              <li>You agree to not spam or flood any content.</li>
-                             <li>Do not impersonate or pretend to be an admin or me. My account is <a href="/222/">222</a>.</li>
+                             <li>Do not impersonate or pretend to be an admin.</li>
+                             {/*
+                             My account is <a href="/222/">222</a>.
+                             */}
                              <li>Do not harass other users.</li>
                              <li>Do not misuse tags.</li>
                              <li>Do not break United States law or local law in the United States.</li>
-                             <li>If you have found an exploit for Formerly Chuck's, <Link to="/support/pages/contact">contact me</Link> instead of using it. I offer rewards in Bitcoin or Monero.</li>
+                             {/*
+                             I offer rewards in Bitcoin or Monero.
+                             */}
+                             <li>If you have found an exploit for Formerly Chuck's, <Link to="/support/pages/contact">contact us</Link> for potential reward instead of using it.</li>
                          </ol>
                     </div>
                 </div>
