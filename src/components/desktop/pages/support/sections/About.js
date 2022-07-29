@@ -53,6 +53,7 @@ function About() {
                                             <p>
                                                 We follow and respect United States law. We are a registered LLC in the United States.
                                             </p>
+                                            {/*
                                             <div className={layoutStyles.mT2}>
                                                 Our community office:
                                                 <hr />
@@ -61,6 +62,7 @@ function About() {
                                                 <p>Skopje 1000</p>
                                                 <p>North Macedonia</p>
                                             </div>
+                                            */ }
                                         </div>
                                     </div>
                                 }
@@ -70,6 +72,7 @@ function About() {
                                         <p>
                                             We follow and respect United States law. We are a registered LLC in the United States.
                                         </p>
+                                        {/*
                                         <div className={layoutStyles.mT2}>
                                             Our community office:
                                             <hr />
@@ -78,6 +81,7 @@ function About() {
                                             <p>Skopje 1000</p>
                                             <p>North Macedonia</p>
                                         </div>
+                                        */}
                                         <hr />
                                         <div>
                                             <div style={{width: "100%", height: "0", paddingTop: "100%", background: "url(" + TiblarStaff + ")", backgroundSize: "cover"}} />
