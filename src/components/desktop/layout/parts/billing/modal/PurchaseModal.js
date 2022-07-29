@@ -55,7 +55,7 @@ function PurchaseModal(props) {
             });
     }, []);
 
-    //useScript("https://js.stripe.com/v3/");
+    useScript("https://js.stripe.com/v3/");
 
     return (
         <div className={modalStyles.containerOuter + (isMobile() ? (" " + modalStyles.mobile) : "")}>
