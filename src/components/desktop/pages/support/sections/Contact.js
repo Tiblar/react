@@ -18,9 +18,17 @@ function Contact(props) {
                         <a href={SUPPORT_URL}>Support Home</a>&nbsp;-&nbsp;Contact support
                     </div>
                     <div className={cardStyles.cardBody}>
-                        <p>In order to contact support you must currently email me.</p>
-                        <p>I am building out the support system, a better implementation is coming.</p>
-                        <p>You can send an email at: support [@] formerlychucks [dot] net</p>
+                        <p>
+                          In order to contact support you can:
+                          <ul>
+                            <li>send an email at: infiend [@] firemail [dot] cc</li>
+                            <li>join our <a href="https://discord.gg/QzcXudsA3c" target="_blank" rel="nofollow">discord</a></li>
+                            {/*
+                            <li>join our <a href="https://telegram.com/" target=_blank rel=nofollow>telegram</a></li>
+                            <p>I am building out the support system, a better implementation is coming.</p>
+                            */}
+                          </ul>
+                        </p>
                     </div>
                 </div>
             </div>
