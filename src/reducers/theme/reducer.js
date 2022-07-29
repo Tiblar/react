@@ -7,7 +7,7 @@ import {
 } from "./constants";
 
 const initialState = {
-  theme: localStorage.getItem('theme') === LIGHT_THEME || localStorage.getItem('theme') === DARK_THEME ? localStorage.getItem('theme') : LIGHT_THEME,
+  theme: localStorage.getItem('theme') === LIGHT_THEME || localStorage.getItem('theme') === DARK_THEME ? localStorage.getItem('theme') : DARK_THEME,
   activeProfileTheme: false,
 };
 
