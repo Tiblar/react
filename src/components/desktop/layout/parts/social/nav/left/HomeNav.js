@@ -41,12 +41,14 @@ function HomeSecure(props) {
                 <div>
                     <SidebarContent>
                         <SidebarTitle>POSTS</SidebarTitle>
-                        <SidebarLink
-                            to="/social/feed"
-                            icon={<FeedIcon width="100%" height="100%" />}
-                            text="Feed"
-                            paths={['/social/feed']}
-                        />
+                        {props.auth.isAuthenticated && (
+                          <SidebarLink
+                              to="/social/feed"
+                              icon={<FeedIcon width="100%" height="100%" />}
+                              text="Feed"
+                              paths={['/social/feed']}
+                          />
+                        )}
                         <SidebarLink
                             to="/social/trending"
                             icon={<TrendingIcon width="100%" height="100%" />}
