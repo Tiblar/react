@@ -21,7 +21,7 @@ import {
     alertDot
 } from "../../../css/components/status-dots.css";
 
-import SocialIcon from "../../../assets/svg/icons/stream.svg";
+import SocialIcon from "../../../assets/svg/icons/users.svg";
 import ChatIcon from "../../../assets/svg/icons/comments.svg";
 import VideoIcon from "../../../assets/svg/icons/video.svg";
 
