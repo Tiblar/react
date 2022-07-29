@@ -20,10 +20,13 @@ function Financials(props) {
                     <div className={cardStyles.cardBody}>
                         <p>In order to contact support you must currently email me.</p>
                         <p>I am building out the support system, a better implementation is coming.</p>
-                        <p>You can send an email at: support [@] formerlychucks [dot] net</p>
+                        <p>You can send an email at: infiend [@] firemail [dot] cc</p>
                         <hr />
                         <p>
-                            Include as much information as you can. This includes your Formerly Chuck's username, PayPal email (if you use PayPal), invoices, etc.
+                        {/*
+                            PayPal email (if you use PayPal)
+                        */}
+                            Include as much information as you can including your Formerly Chuck's username
                         </p>
                     </div>
                 </div>
