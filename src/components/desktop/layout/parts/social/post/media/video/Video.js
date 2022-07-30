@@ -11,8 +11,10 @@ import PlyrComponent from "../../../../../../../../util/components/PlyrComponent
 const Video = (props) => {
 //
 let sources
+// set initial source
 if (props.file.available_transcoding) {
-  console.log('oldtc')
+  // still in use somewhere
+  console.log('setting default source', props.file.available_transcoding.h)
   sources = [{ src: props.file.file.url, size: props.file.available_transcoding.h }]
 } else
 if (props.file.available_transcodes) {
@@ -26,8 +28,10 @@ if (props.file.file.height) {
   console.log('no height in props:', props)
   sources = [{ src: props.file.file.url }]
 }
+
+// set additional sources
 if (props.file && (props.file.available_transcoding || props.file.available_transcodes)) {
-  console.log('detected additional video sources', props.file)
+  console.log('detected additional video sources in', props.file)
 
   // keep transcode URLs relative to file.url
   let base = 'http://192.168.253.60:9000/seed/'
@@ -38,15 +42,16 @@ if (props.file && (props.file.available_transcoding || props.file.available_tran
   }
 
   // fix up formats
-  if (props.file.available_transcoding) {
-    console.log('oldtc')
+  if (props.file.available_transcoding) { // this has to be first
     const transCodes = props.file.available_transcoding.alts.map(t => { return { src: base + t.path, size: t.res } })
+    console.log('setting source', transCodes)
     sources = [...transCodes, { src: props.file.file.url, size: props.file.available_transcoding.h }]
-  }
-  if (props.file.available_transcodes) {
+  } else
+  if (props.file.available_transcodes) { // this is sometimes set without data
     const transCodes = props.file.available_transcodes.alts.map(t => { return { src: base + t.path, size: t.res } })
     sources = [...transCodes, { src: props.file.file.url, size: props.file.available_transcodes.h }]
   }
+  console.log('setting available sources', sources)
 }
 
     return (
