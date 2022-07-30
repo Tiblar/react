@@ -15,7 +15,7 @@ Visit `localhost:8080` for the website.
 
 1. Install `npm`
 2. Run `npm i`
-3. Copy the constants template from `src/util/constants.js` to `src/util/constants.js`
+3. Copy the constants template from `src/util/constants_template.js` to `src/util/constants.js`
 4. You can now either build or run the development version
 
 ## Available Scripts
